@@ -1,0 +1,100 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Latency / Aspect-Based Hotel Review Analysis</title>
+<link rel="stylesheet" href="assets/fonts.css">
+<link rel="stylesheet" href="assets/design.css">
+<link rel="stylesheet" href="assets/docs.css">
+</head>
+<body>
+<header class="topbar">
+  <div class="brand">
+    <span class="wordmark">Aspect-Based Hotel Review Analysis</span>
+    <span class="brand-rule" aria-hidden="true"></span>
+    <span class="view-label">Latency</span>
+  </div>
+  <div class="doc-links">
+    <a href="index.html">Showcase</a>
+    <a href="method.html">Method</a>
+    <a href="facets.html">Facets</a>
+    <a href="latency.html" aria-current="page">Latency</a>
+    <a href="decisions.html">Decisions</a>
+  </div>
+</header>
+
+<main class="doc-main">
+  <header class="doc-hero">
+    <p class="eyebrow doc-kicker">Latency</p>
+    <h1 class="display2">What each stage costs.</h1>
+    <p class="lede">Cold model load each run, three repetitions per batch. The table reports medians. The API row is a warm recompute from an already-built database.</p>
+  </header>
+
+  <section class="doc-section">
+    <h2 class="heading">Per-stage medians</h2>
+    <div class="doc-table-wrap">
+      <table class="doc-table">
+        <thead><tr><th>Stage</th><th>10 reviews</th><th>100 reviews</th><th>377 reviews</th></tr></thead>
+        <tbody id="latencyRows"><tr><td colspan="4" class="caption">Loading...</td></tr></tbody>
+      </table>
+    </div>
+    <p class="caption" id="latencyMeta"></p>
+  </section>
+
+  <section class="doc-section">
+    <h2 class="heading">What dominates</h2>
+    <p>At 377 reviews the import takes about <b>48.1 s</b>. The process startup and imports are about <b>12.5 s</b>; segmentation is <b>10.2 s</b>, the e5 embedding and facet pass <b>11.8 s</b>, the sentiment probe <b>6.8 s</b>, and category classification <b>6.1 s</b>. Normalize, aggregate and build-data are each under 0.2 s. A warm <code>/api/data</code> call is about <b>12 ms</b>.</p>
+    <p>The 10-review batch is dominated by fixed model and import cost. The scaling signal is the 100 to 377 range; model load and process startup are effectively fixed.</p>
+  </section>
+
+  <section class="doc-section">
+    <h2 class="heading">Environment</h2>
+    <p class="caption" id="latencyEnv"></p>
+    <p class="caption">Measurements from <code>scripts/timing.py</code>; aggregate timings only, no review text. Stage durations are read from millisecond timestamps.</p>
+  </section>
+
+  <footer class="doc-foot">
+    <p class="caption">The timing harness runs on a temporary data directory.</p>
+  </footer>
+</main>
+
+<script>
+const STAGES = [
+  ["startup_overhead", "Process startup / imports"],
+  ["normalize", "Normalize"],
+  ["segment", "Segment"],
+  ["classify", "Classify"],
+  ["embed_facets", "e5 + facets"],
+  ["sentiment", "Sentiment probe"],
+  ["rules_facets_write", "Rules + routing + write"],
+  ["aggregate", "Aggregate"],
+  ["build_data", "Build data"],
+  ["import_total", "Import total"],
+  ["api_data", "/api/data"],
+];
+fetch("data/latency.json").then((r) => {
+  if (!r.ok) throw new Error("latency.json " + r.status);
+  return r.json();
+}).then((d) => {
+  const sizes = Object.keys(d.sizes).sort((a, b) => +a - +b);
+  document.getElementById("latencyRows").innerHTML = STAGES.map(([key, label]) => {
+    const cells = sizes.map((n) => {
+      const s = d.sizes[n].summary[key];
+      if (!s) return `<td class="num">-</td>`;
+      const sec = s.median_ms / 1000;
+      return `<td class="num">${sec < 0.1 ? (s.median_ms).toFixed(1) + " ms" : sec.toFixed(2) + " s"}</td>`;
+    }).join("");
+    return `<tr class="${key === "import_total" ? "current" : ""}"><td>${label}</td>${cells}</tr>`;
+  }).join("");
+  const e = d.environment;
+  document.getElementById("latencyMeta").textContent =
+    `${d.note}. ${d.sizes[sizes[0]].runs} runs per batch.`;
+  document.getElementById("latencyEnv").textContent =
+    `${e.gpu || "CPU"} / ${e.processor} / Python ${e.python} / torch ${e.torch}`;
+}).catch((e) => {
+  document.getElementById("latencyMeta").innerHTML = `<span class="doc-error">${e.message}</span>`;
+});
+</script>
+</body>
+</html>

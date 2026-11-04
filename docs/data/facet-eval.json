@@ -1,0 +1,397 @@
+{
+  "generated": "2026-11-04",
+  "gold": {
+    "rows": 1075,
+    "dev": 482,
+    "fresh": 593,
+    "evaluated": 593,
+    "categories": 6,
+    "buckets": 38
+  },
+  "protocol": "held-out fresh split; one predicted bucket per sentence; top-1 coverage counts a hit when the prediction is in the acceptable set; bucket coverage macro",
+  "embedding_s": 12.04,
+  "embedding_ms_per_sentence": 11.2,
+  "environment": {
+    "device": "cuda",
+    "gpu": "NVIDIA GeForce RTX 4050 Laptop GPU",
+    "torch": "2.6.0+cu124"
+  },
+  "algorithms": [
+    {
+      "name": "magnet max (current)",
+      "family": "unsupervised",
+      "coverage": 0.9224,
+      "bucket_coverage": 0.9371,
+      "fit_s": 0.0,
+      "method_ms_per_sentence": 0.0254
+    },
+    {
+      "name": "magnet centroid",
+      "family": "unsupervised",
+      "coverage": 0.8094,
+      "bucket_coverage": 0.8285,
+      "fit_s": 0.0,
+      "method_ms_per_sentence": 0.012
+    },
+    {
+      "name": "tf-idf centroid",
+      "family": "lexical",
+      "coverage": 0.6526,
+      "bucket_coverage": 0.6746,
+      "fit_s": 0.0,
+      "method_ms_per_sentence": 0.6785
+    },
+    {
+      "name": "logistic regression",
+      "family": "supervised",
+      "coverage": 0.801,
+      "bucket_coverage": 0.7834,
+      "fit_s": 0.289,
+      "method_ms_per_sentence": 0.0573
+    },
+    {
+      "name": "linear SVM",
+      "family": "supervised",
+      "coverage": 0.8229,
+      "bucket_coverage": 0.8014,
+      "fit_s": 0.525,
+      "method_ms_per_sentence": 0.0102
+    },
+    {
+      "name": "kNN",
+      "family": "supervised",
+      "coverage": 0.7302,
+      "bucket_coverage": 0.7313,
+      "fit_s": 0.0,
+      "method_ms_per_sentence": 0.0098
+    },
+    {
+      "name": "k-means",
+      "family": "clustering",
+      "coverage": 0.5852,
+      "bucket_coverage": 0.5639,
+      "fit_s": 1.581,
+      "method_ms_per_sentence": 0.0704
+    },
+    {
+      "name": "agglomerative",
+      "family": "clustering",
+      "coverage": 0.5194,
+      "bucket_coverage": 0.4912,
+      "fit_s": 0.03,
+      "method_ms_per_sentence": 0.0045
+    },
+    {
+      "name": "NMF (tf-idf)",
+      "family": "topic",
+      "coverage": 0.3895,
+      "bucket_coverage": 0.391,
+      "fit_s": 0.118,
+      "method_ms_per_sentence": 0.0336
+    },
+    {
+      "name": "LDA (counts)",
+      "family": "topic",
+      "coverage": 0.3642,
+      "bucket_coverage": 0.3143,
+      "fit_s": 0.529,
+      "method_ms_per_sentence": 0.0511
+    },
+    {
+      "name": "random",
+      "family": "baseline",
+      "coverage": 0.1939,
+      "bucket_coverage": 0.2264,
+      "fit_s": 0.0,
+      "method_ms_per_sentence": 0.0005
+    }
+  ],
+  "per_category": {
+    "magnet max (current)": {
+      "Entertainment & Animation": {
+        "n": 100,
+        "coverage": 0.95
+      },
+      "Food & Drink": {
+        "n": 97,
+        "coverage": 0.8866
+      },
+      "Pool & Beach": {
+        "n": 100,
+        "coverage": 0.94
+      },
+      "Room & Property": {
+        "n": 100,
+        "coverage": 0.87
+      },
+      "Spa & Wellness": {
+        "n": 98,
+        "coverage": 0.9592
+      },
+      "Staff & Service": {
+        "n": 98,
+        "coverage": 0.9286
+      }
+    },
+    "magnet centroid": {
+      "Entertainment & Animation": {
+        "n": 100,
+        "coverage": 0.84
+      },
+      "Food & Drink": {
+        "n": 97,
+        "coverage": 0.7835
+      },
+      "Pool & Beach": {
+        "n": 100,
+        "coverage": 0.9
+      },
+      "Room & Property": {
+        "n": 100,
+        "coverage": 0.76
+      },
+      "Spa & Wellness": {
+        "n": 98,
+        "coverage": 0.7959
+      },
+      "Staff & Service": {
+        "n": 98,
+        "coverage": 0.7755
+      }
+    },
+    "tf-idf centroid": {
+      "Entertainment & Animation": {
+        "n": 100,
+        "coverage": 0.79
+      },
+      "Food & Drink": {
+        "n": 97,
+        "coverage": 0.6598
+      },
+      "Pool & Beach": {
+        "n": 100,
+        "coverage": 0.7
+      },
+      "Room & Property": {
+        "n": 100,
+        "coverage": 0.69
+      },
+      "Spa & Wellness": {
+        "n": 98,
+        "coverage": 0.5612
+      },
+      "Staff & Service": {
+        "n": 98,
+        "coverage": 0.5102
+      }
+    },
+    "logistic regression": {
+      "Entertainment & Animation": {
+        "n": 100,
+        "coverage": 0.82
+      },
+      "Food & Drink": {
+        "n": 97,
+        "coverage": 0.7216
+      },
+      "Pool & Beach": {
+        "n": 100,
+        "coverage": 0.81
+      },
+      "Room & Property": {
+        "n": 100,
+        "coverage": 0.8
+      },
+      "Spa & Wellness": {
+        "n": 98,
+        "coverage": 0.8163
+      },
+      "Staff & Service": {
+        "n": 98,
+        "coverage": 0.8367
+      }
+    },
+    "linear SVM": {
+      "Entertainment & Animation": {
+        "n": 100,
+        "coverage": 0.8
+      },
+      "Food & Drink": {
+        "n": 97,
+        "coverage": 0.732
+      },
+      "Pool & Beach": {
+        "n": 100,
+        "coverage": 0.83
+      },
+      "Room & Property": {
+        "n": 100,
+        "coverage": 0.85
+      },
+      "Spa & Wellness": {
+        "n": 98,
+        "coverage": 0.8571
+      },
+      "Staff & Service": {
+        "n": 98,
+        "coverage": 0.8673
+      }
+    },
+    "kNN": {
+      "Entertainment & Animation": {
+        "n": 100,
+        "coverage": 0.69
+      },
+      "Food & Drink": {
+        "n": 97,
+        "coverage": 0.6907
+      },
+      "Pool & Beach": {
+        "n": 100,
+        "coverage": 0.76
+      },
+      "Room & Property": {
+        "n": 100,
+        "coverage": 0.82
+      },
+      "Spa & Wellness": {
+        "n": 98,
+        "coverage": 0.6633
+      },
+      "Staff & Service": {
+        "n": 98,
+        "coverage": 0.7551
+      }
+    },
+    "k-means": {
+      "Entertainment & Animation": {
+        "n": 100,
+        "coverage": 0.67
+      },
+      "Food & Drink": {
+        "n": 97,
+        "coverage": 0.4639
+      },
+      "Pool & Beach": {
+        "n": 100,
+        "coverage": 0.66
+      },
+      "Room & Property": {
+        "n": 100,
+        "coverage": 0.47
+      },
+      "Spa & Wellness": {
+        "n": 98,
+        "coverage": 0.6429
+      },
+      "Staff & Service": {
+        "n": 98,
+        "coverage": 0.602
+      }
+    },
+    "agglomerative": {
+      "Entertainment & Animation": {
+        "n": 100,
+        "coverage": 0.43
+      },
+      "Food & Drink": {
+        "n": 97,
+        "coverage": 0.3814
+      },
+      "Pool & Beach": {
+        "n": 100,
+        "coverage": 0.63
+      },
+      "Room & Property": {
+        "n": 100,
+        "coverage": 0.49
+      },
+      "Spa & Wellness": {
+        "n": 98,
+        "coverage": 0.5612
+      },
+      "Staff & Service": {
+        "n": 98,
+        "coverage": 0.6224
+      }
+    },
+    "NMF (tf-idf)": {
+      "Entertainment & Animation": {
+        "n": 100,
+        "coverage": 0.45
+      },
+      "Food & Drink": {
+        "n": 97,
+        "coverage": 0.2268
+      },
+      "Pool & Beach": {
+        "n": 100,
+        "coverage": 0.38
+      },
+      "Room & Property": {
+        "n": 100,
+        "coverage": 0.39
+      },
+      "Spa & Wellness": {
+        "n": 98,
+        "coverage": 0.5204
+      },
+      "Staff & Service": {
+        "n": 98,
+        "coverage": 0.3673
+      }
+    },
+    "LDA (counts)": {
+      "Entertainment & Animation": {
+        "n": 100,
+        "coverage": 0.42
+      },
+      "Food & Drink": {
+        "n": 97,
+        "coverage": 0.2268
+      },
+      "Pool & Beach": {
+        "n": 100,
+        "coverage": 0.33
+      },
+      "Room & Property": {
+        "n": 100,
+        "coverage": 0.25
+      },
+      "Spa & Wellness": {
+        "n": 98,
+        "coverage": 0.5816
+      },
+      "Staff & Service": {
+        "n": 98,
+        "coverage": 0.3776
+      }
+    },
+    "random": {
+      "Entertainment & Animation": {
+        "n": 100,
+        "coverage": 0.28
+      },
+      "Food & Drink": {
+        "n": 97,
+        "coverage": 0.1443
+      },
+      "Pool & Beach": {
+        "n": 100,
+        "coverage": 0.18
+      },
+      "Room & Property": {
+        "n": 100,
+        "coverage": 0.15
+      },
+      "Spa & Wellness": {
+        "n": 98,
+        "coverage": 0.2143
+      },
+      "Staff & Service": {
+        "n": 98,
+        "coverage": 0.1939
+      }
+    }
+  }
+}

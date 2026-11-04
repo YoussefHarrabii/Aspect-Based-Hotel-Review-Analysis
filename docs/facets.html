@@ -1,0 +1,95 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Facet routing / Aspect-Based Hotel Review Analysis</title>
+<link rel="stylesheet" href="assets/fonts.css">
+<link rel="stylesheet" href="assets/design.css">
+<link rel="stylesheet" href="assets/docs.css">
+</head>
+<body>
+<header class="topbar">
+  <div class="brand">
+    <span class="wordmark">Aspect-Based Hotel Review Analysis</span>
+    <span class="brand-rule" aria-hidden="true"></span>
+    <span class="view-label">Facets</span>
+  </div>
+  <div class="doc-links">
+    <a href="index.html">Showcase</a>
+    <a href="method.html">Method</a>
+    <a href="facets.html" aria-current="page">Facets</a>
+    <a href="latency.html">Latency</a>
+    <a href="decisions.html">Decisions</a>
+  </div>
+</header>
+
+<main class="doc-main">
+  <header class="doc-hero">
+    <p class="eyebrow doc-kicker">Facet routing</p>
+    <h1 class="display2">Magnet words against the alternatives.</h1>
+    <p class="lede">The current router embeds a sentence with e5-instruct and takes the bucket with the highest cosine to any of its magnet words. This is the same deterministic routing the dashboard uses.</p>
+  </header>
+
+  <div class="doc-callout">
+    <p>The gold file and the production magnet bank are outside this repository. The gold is not published; the results below are aggregate metrics only.</p>
+  </div>
+
+  <section class="doc-section">
+    <h2 class="heading">Protocol</h2>
+    <ul>
+      <li><b>Gold:</b> 1,075 hand-labelled sentences, 38 buckets, 6 categories; 482 dev / 593 fresh. Reported on the held-out fresh split.</li>
+      <li><b>Prediction:</b> one bucket inside the sentence's known category.</li>
+      <li><b>Acceptable:</b> a sentence can belong to more than one facet. The hand-labelled <code>acceptable</code> set lists every facet a labeller accepted for that sentence, so a prediction counts as correct when it matches any one of them. Most rows accept one facet; some accept two or three.</li>
+      <li><b>Metrics:</b> top-1 coverage (whether the one predicted bucket is accepted), bucket-coverage macro, fit time and method time per sentence.</li>
+      <li><b>Shared cost:</b> the e5 embedding pass is outside the per-method time; it is reported once below the table.</li>
+    </ul>
+  </section>
+
+  <section class="doc-section">
+    <h2 class="heading">Results</h2>
+    <p class="caption" id="facetMeta">Loading the cached benchmark.</p>
+    <div class="doc-table-wrap">
+      <table class="doc-table">
+        <thead><tr><th>Method</th><th>Top-1 coverage</th><th>Bucket coverage</th><th>ms/sentence</th></tr></thead>
+        <tbody id="facetRows"><tr><td colspan="4" class="caption">Loading...</td></tr></tbody>
+      </table>
+    </div>
+  </section>
+
+  <section class="doc-section">
+    <h2 class="heading">What the sweep shows</h2>
+    <p>The current magnet router leads: <b>0.922 top-1 coverage</b> and <b>0.937 bucket coverage</b> on 593 fresh sentences. The strongest supervised alternative is linear SVM at 0.823 coverage; logistic regression reaches 0.801, the magnet centroid 0.809, and kNN 0.730. TF-IDF is 0.653. K-means, agglomerative clustering, NMF and LDA fall between 0.59 and 0.36; the random baseline is 0.194.</p>
+    <p>Fit time is 0.3&ndash;1.6 s for the trainable methods; the unsupervised routers have no fit. The nearest-magnet geometry is hard to beat here, and the remaining headroom is mostly vocabulary and bucket definition.</p>
+    <p>The production bucket set is tuned for a particular taxonomy. This repository ships an example set; the benchmark above uses the production bank locally and must not be read as a score for the example set.</p>
+  </section>
+
+  <footer class="doc-foot">
+    <p class="caption">Gold and production bank not released. See <a href="decisions.html">Decisions</a> for why the magnets stay.</p>
+  </footer>
+</main>
+
+<script>
+fetch("data/facet-eval.json").then((r) => {
+  if (!r.ok) throw new Error("facet-eval.json " + r.status);
+  return r.json();
+}).then((d) => {
+  const g = d.gold;
+  document.getElementById("facetMeta").textContent =
+    `${g.evaluated} held-out sentences / ${g.rows} gold rows / ${g.buckets} buckets / ${d.environment.device.toUpperCase()} / embedding ${d.embedding_ms_per_sentence.toFixed(1)} ms per sentence`;
+  const rows = d.algorithms.slice().sort((a, b) => b.coverage - a.coverage);
+  document.getElementById("facetRows").innerHTML = rows.map((a) => {
+    const current = a.name.startsWith("magnet max");
+    return `<tr class="${current ? "current" : ""}">
+      <td><span class="doc-bar ${current ? "current" : ""}"><i style="width:${Math.round(a.coverage * 100)}%"></i></span>${a.name}</td>
+      <td class="num">${(a.coverage * 100).toFixed(1)}%</td>
+      <td class="num">${(a.bucket_coverage * 100).toFixed(1)}%</td>
+      <td class="num">${a.method_ms_per_sentence.toFixed(3)}</td>
+    </tr>`;
+  }).join("");
+}).catch((e) => {
+  document.getElementById("facetMeta").innerHTML = `<span class="doc-error">${e.message}</span>`;
+});
+</script>
+</body>
+</html>

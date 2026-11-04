@@ -1,0 +1,44 @@
+/* Documentation pages: same tokens, narrower editorial measure. */
+.doc-main { max-width: 980px; margin: 0 auto; padding: 56px 0 80px; }
+.doc-hero { padding-bottom: 44px; border-bottom: 1px solid var(--hairline); }
+.doc-hero .display2 { max-width: 18ch; }
+.doc-hero .lede { max-width: 62ch; }
+.doc-links { display: flex; gap: 4px; flex-wrap: wrap; justify-content: flex-end; }
+.doc-links a {
+  height: 32px; display: inline-flex; align-items: center; padding: 0 12px;
+  font-family: var(--mono); font-size: 11px; letter-spacing: .06em; text-transform: uppercase;
+  color: var(--stone-600); text-decoration: none; border-radius: 9999px;
+}
+.doc-links a:hover { background: var(--surface); color: var(--cream); }
+.doc-links a[aria-current="page"] { color: var(--cream); background: var(--accent-soft); }
+.doc-section { margin-top: 44px; }
+.doc-section h2 { margin: 0 0 16px; }
+.doc-section h3 { font-family: var(--serif); font-weight: 300; font-size: 24px; letter-spacing: -.03em; margin: 28px 0 12px; }
+.doc-section p { max-width: 68ch; color: var(--stone-400); font-size: 16px; line-height: 1.6; margin: 0 0 14px; }
+.doc-section li { color: var(--stone-400); font-size: 15px; line-height: 1.6; margin-bottom: 8px; }
+.doc-section ul, .doc-section ol { max-width: 68ch; padding-left: 20px; margin: 0 0 16px; }
+.doc-figure { margin: 24px 0; padding: 20px; background: var(--surface); border: 1px solid var(--hairline); border-radius: 12px; }
+.doc-figure img { width: 100%; height: auto; max-height: 460px; object-fit: contain; display: block; }
+.doc-figure figcaption { margin-top: 12px; font-family: var(--mono); font-size: 11px; line-height: 1.6; color: var(--stone-600); }
+.doc-callout { border-left: 2px solid var(--accent); padding: 2px 0 2px 16px; margin: 24px 0; }
+.doc-callout p { margin: 0; color: var(--stone-400); }
+.doc-table-wrap { overflow-x: auto; border: 1px solid var(--hairline); border-radius: 12px; }
+.doc-table { width: 100%; border-collapse: collapse; font-size: 13px; }
+.doc-table th, .doc-table td { text-align: left; padding: 10px 12px; border-bottom: 1px solid var(--hairline); white-space: nowrap; }
+.doc-table th { font-family: var(--mono); font-size: 10px; letter-spacing: .05em; text-transform: uppercase; color: var(--stone-600); font-weight: 400; }
+.doc-table td { color: var(--stone-400); }
+.doc-table tr:last-child td { border-bottom: 0; }
+.doc-table .current { color: var(--cream); background: var(--accent-soft); }
+.doc-table .num { font-family: var(--mono); font-size: 12px; color: var(--cream); }
+.doc-bar { width: 120px; height: 3px; background: var(--hairline); display: inline-block; vertical-align: middle; margin-right: 8px; }
+.doc-bar i { display: block; height: 100%; background: var(--stone-400); }
+.doc-bar.current i { background: var(--accent); }
+.doc-meta { display: flex; flex-wrap: wrap; gap: 8px 20px; margin-top: 20px; }
+.doc-kicker { margin: 0 0 8px; }
+.doc-foot { margin-top: 64px; padding-top: 24px; border-top: 1px solid var(--hairline); }
+.doc-error { color: var(--negative); font-family: var(--mono); font-size: 12px; }
+@media (max-width: 900px) {
+  .doc-main { padding: 36px 20px 64px; }
+  .doc-links { justify-content: flex-start; }
+  .doc-table th, .doc-table td { padding: 8px; }
+}

@@ -1,0 +1,27 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 360 320" role="img" aria-labelledby="mentionTitle mentionDesc">
+  <title id="mentionTitle">One review, three sentences</title>
+  <desc id="mentionDesc">A review is split into sentences. Each sentence receives a category, a sentiment and a facet.</desc>
+  <g font-family="'IBM Plex Mono', ui-monospace, monospace">
+    <text x="16" y="22" fill="#959089" font-size="8.5" letter-spacing="1">ONE REVIEW</text>
+    <rect x="16" y="34" width="328" height="84" rx="8" fill="#1A1918" stroke="#363533"/>
+    <g fill="#F9F5EF" font-size="10.5">
+      <text x="32" y="58">The room was clean.</text>
+      <text x="32" y="80">Breakfast was fresh.</text>
+      <text x="32" y="102">The spa was calm.</text>
+    </g>
+    <text x="16" y="150" fill="#959089" font-size="8.5" letter-spacing="1">SENTENCE → LABELS</text>
+    <g font-size="10.5">
+      <text x="16" y="176" fill="#625D58">01</text><text x="46" y="176" fill="#F9F5EF">Room &amp; Property</text>
+      <text x="46" y="192" fill="#85EDA5" font-size="9">positive</text>
+      <text x="250" y="192" fill="#C42B3E" font-size="9">Cleanliness</text>
+      <line x1="16" y1="204" x2="344" y2="204" stroke="#363533"/>
+      <text x="16" y="228" fill="#625D58">02</text><text x="46" y="228" fill="#F9F5EF">Food &amp; Drink</text>
+      <text x="46" y="244" fill="#85EDA5" font-size="9">positive</text>
+      <text x="250" y="244" fill="#959089" font-size="9">Breakfast</text>
+      <line x1="16" y1="256" x2="344" y2="256" stroke="#363533"/>
+      <text x="16" y="280" fill="#625D58">03</text><text x="46" y="280" fill="#F9F5EF">Spa &amp; Wellness</text>
+      <text x="46" y="296" fill="#85EDA5" font-size="9">positive</text>
+      <text x="250" y="296" fill="#959089" font-size="9">Treatments</text>
+    </g>
+  </g>
+</svg>

@@ -1,0 +1,110 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Aspect-Based Hotel Review Analysis / Showcase</title>
+<link rel="stylesheet" href="assets/fonts.css?v=11">
+<link rel="stylesheet" href="assets/design.css?v=11">
+<link rel="stylesheet" href="assets/showcase.css?v=12">
+<link rel="stylesheet" href="assets/docs.css">
+</head>
+<body>
+<div class="progress"><div id="progress"></div></div>
+
+<header class="topbar">
+  <div class="brand">
+    <span class="wordmark">Aspect-Based Hotel Review Analysis</span>
+    <span class="brand-rule" aria-hidden="true"></span>
+    <span class="view-label">Showcase</span>
+  </div>
+  <div class="doc-links">
+    <a href="index.html" aria-current="page">Showcase</a>
+    <a href="method.html">Method</a>
+    <a href="facets.html">Facets</a>
+    <a href="latency.html">Latency</a>
+    <a href="decisions.html">Decisions</a>
+  </div>
+</header>
+
+<main class="container">
+  <div class="overview-top">
+    <section class="hero">
+      <p class="eyebrow">Cached results / ten reviews</p>
+      <h1 class="display"><span class="line"><span>What the classifier</span></span><span class="line"><span>sees in ten reviews.</span></span></h1>
+      <p class="lede">Every sentence is labelled with a category, a sentiment and a facet. These results are cached and read from JSON.</p>
+    </section>
+
+    <section class="panel overview-panel" id="summary">
+      <div class="panel-head">
+        <p class="eyebrow">Overview</p>
+        <span class="caption" id="summaryDate"></span>
+      </div>
+      <p class="display2" id="summaryReviews">0 reviews</p>
+      <p class="caption" id="summaryMentions"></p>
+      <div class="metrics" id="summaryMetrics"></div>
+      <div class="ledger" id="summaryLedger"></div>
+    </section>
+  </div>
+
+  <hr class="rule">
+
+  <div class="section-head">
+    <div>
+      <p class="eyebrow">Reviews</p>
+      <h2 class="heading">Ten cached reviews</h2>
+    </div>
+    <span class="caption">Select one</span>
+  </div>
+
+  <div class="showcase-layout">
+    <div>
+      <div class="review-list" id="reviewList" role="tablist" aria-label="Reviews"></div>
+    </div>
+    <div class="panel detail" id="detail">
+      <p class="empty">Select a review.</p>
+    </div>
+  </div>
+
+  <hr class="rule">
+
+  <div class="section-head">
+    <div>
+      <p class="eyebrow">Method</p>
+      <h2 class="heading">How the labels are made</h2>
+    </div>
+    <span class="caption">Three views</span>
+  </div>
+
+  <div class="diagram-grid">
+    <figure class="diagram-card">
+      <img src="assets/diagrams/pipeline.svg" alt="Pipeline from a local CSV through normalize, segmentation, classification, sentiment and facets to the overview.">
+      <figcaption><span class="eyebrow">Pipeline</span><p>CSV to sentence, sentence to mention, mention to category counts.</p><a href="method.html">Read the method</a></figcaption>
+    </figure>
+    <figure class="diagram-card">
+      <img src="assets/diagrams/mention.svg" alt="One review split into three sentences, each with a category, sentiment and facet.">
+      <figcaption><span class="eyebrow">Mention</span><p>One review becomes sentence-level labels.</p><a href="method.html">See the stages</a></figcaption>
+    </figure>
+    <figure class="diagram-card">
+      <img src="assets/diagrams/facet-routing.svg" alt="A sentence is routed to the bucket with the highest cosine similarity to its magnet words.">
+      <figcaption><span class="eyebrow">Facet routing</span><p>Max cosine to the bucket's magnet words. The benchmark tests this against alternatives.</p><a href="facets.html">Read the results</a></figcaption>
+    </figure>
+  </div>
+
+  <div class="method-links">
+    <a href="method.html">Method</a>
+    <a href="facets.html">Facet benchmark</a>
+    <a href="latency.html">Latency</a>
+    <a href="decisions.html">Decisions</a>
+  </div>
+</main>
+
+<footer class="container footer">
+  <span class="caption">Cached from the local pipeline.</span>
+  <span class="caption">Ten reviews / one property</span>
+</footer>
+
+<div class="toast" id="toast"></div>
+<script src="showcase.js?v=11"></script>
+</body>
+</html>

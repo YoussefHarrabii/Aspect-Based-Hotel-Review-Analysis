@@ -1,0 +1,76 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Method / Aspect-Based Hotel Review Analysis</title>
+<link rel="stylesheet" href="assets/fonts.css">
+<link rel="stylesheet" href="assets/design.css">
+<link rel="stylesheet" href="assets/docs.css">
+</head>
+<body>
+<header class="topbar">
+  <div class="brand">
+    <span class="wordmark">Aspect-Based Hotel Review Analysis</span>
+    <span class="brand-rule" aria-hidden="true"></span>
+    <span class="view-label">Method</span>
+  </div>
+  <div class="doc-links">
+    <a href="index.html">Showcase</a>
+    <a href="method.html" aria-current="page">Method</a>
+    <a href="facets.html">Facets</a>
+    <a href="latency.html">Latency</a>
+    <a href="decisions.html">Decisions</a>
+  </div>
+</header>
+
+<main class="doc-main">
+  <header class="doc-hero">
+    <p class="eyebrow doc-kicker">Method</p>
+    <h1 class="display2">How a review becomes a facet.</h1>
+    <p class="lede">The local pipeline reads one CSV, splits each review into sentences, labels every sentence, routes the result to a facet, and aggregates the mentions. The model is fitted offline; the service only loads saved weights.</p>
+  </header>
+
+  <figure class="doc-figure">
+    <img src="assets/diagrams/pipeline.svg" alt="Vertical pipeline: CSV, normalize, segment, classify, probe and facets, aggregate and UI.">
+    <figcaption>Local CSV to SQLite, sentence units, one category model, the sentiment probe and magnet routing, then aggregate and the overview.</figcaption>
+  </figure>
+
+  <section class="doc-section">
+    <h2 class="heading">Fit versus serve</h2>
+    <p>The classifier and the sentiment probe are fitted outside the service. A build loads the saved classifier, the saved probe and the e5 encoder, processes the batch, and writes mentions. The server recomputes the aggregate from SQLite on <code>GET /api/data</code> and never fits anything.</p>
+    <p>The category model is one DeBERTa-v3-base seed. It has seven sigmoid outputs; <code>Location</code> is kept only because removing an output would change the label order, and it is excluded from aggregation and UI. <code>General Experience</code> is a vague facet, shown separately in the local dashboard and omitted from the showcase.</p>
+  </section>
+
+  <section class="doc-section">
+    <h2 class="heading">Stages</h2>
+    <ol>
+      <li><b>Normalize</b> reads the CSV into SQLite and removes exact and guarded near-duplicates.</li>
+      <li><b>Segment</b> slices long text, restores punctuation and splits on sentence boundaries.</li>
+      <li><b>Classify</b> runs the saved DeBERTa seed and thresholds each label.</li>
+      <li><b>Probe</b> embeds the sentence with e5-instruct and scores positive/negative; the neutral band is <code>|p - 0.5| &lt; 0.10</code>.</li>
+      <li><b>Facets</b> compare the same e5 vector with each bucket's magnet words and take the highest cosine within the category and polarity.</li>
+      <li><b>Aggregate</b> counts reviews, mentions, categories, facets and quotes; <b>build data</b> writes the payload the page reads.</li>
+    </ol>
+  </section>
+
+  <figure class="doc-figure">
+    <img src="assets/diagrams/mention.svg" alt="One review split into three sentences, each labelled with a category, sentiment and facet.">
+    <figcaption>One review becomes several sentence labels. Each carries its own category, sentiment and facet; the dashboard counts the mentions.</figcaption>
+  </figure>
+
+  <section class="doc-section">
+    <h2 class="heading">Read next</h2>
+    <ul>
+      <li><a href="facets.html">Facet routing benchmark</a>: the current router against ten alternatives on the hand-labelled gold.</li>
+      <li><a href="latency.html">Latency</a>: per-stage medians for 10, 100 and 377 reviews on the current GPU.</li>
+      <li><a href="decisions.html">Decisions</a>: the rules and limits for this build.</li>
+    </ul>
+  </section>
+
+  <footer class="doc-foot">
+    <p class="caption">Gold labels and the production magnet bank are not released with this repository.</p>
+  </footer>
+</main>
+</body>
+</html>

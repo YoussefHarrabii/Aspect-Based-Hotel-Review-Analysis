@@ -1,0 +1,2096 @@
+{
+ "generated": "05 Nov 2026",
+ "hotel": {
+  "hotel": "Your hotel",
+  "place": "",
+  "period": "2026-07-19 to 2026-09-20",
+  "totals": {
+   "reviews": 10,
+   "with_text": 10,
+   "rating_only": 0,
+   "avg": 3.0,
+   "avg_all": 3.0,
+   "buckets": {
+    "critical": 4,
+    "mixed": 2,
+    "praise": 4
+   }
+  },
+  "verdict": {
+   "headline": "Staff & Service is the weakest area in this range.",
+   "detail": "69% of Staff & Service mentions are negative (20 of 29).",
+   "topic": "Staff & Service"
+  },
+  "buckets": [
+   {
+    "key": "critical",
+    "name": "Critical",
+    "stars": "1–2★",
+    "n": 4,
+    "polarity": "negative",
+    "themes": [
+     {
+      "topic": "Staff & Service",
+      "pct": 100.0,
+      "count": 4,
+      "severity": 3
+     },
+     {
+      "topic": "Food & Drink",
+      "pct": 75.0,
+      "count": 3,
+      "severity": 3
+     },
+     {
+      "topic": "Pool & Beach",
+      "pct": 75.0,
+      "count": 3,
+      "severity": 3
+     },
+     {
+      "topic": "Room & Property",
+      "pct": 75.0,
+      "count": 3,
+      "severity": 3
+     },
+     {
+      "topic": "Entertainment & Animation",
+      "pct": 25.0,
+      "count": 1,
+      "severity": 3
+     },
+     {
+      "topic": "Location",
+      "pct": 25.0,
+      "count": 1,
+      "severity": 3
+     }
+    ]
+   },
+   {
+    "key": "mixed",
+    "name": "Mixed",
+    "stars": "3★",
+    "n": 2,
+    "polarity": "neutral",
+    "themes": [
+     {
+      "topic": "Food & Drink",
+      "pct": 100.0,
+      "count": 2,
+      "severity": 2
+     },
+     {
+      "topic": "Pool & Beach",
+      "pct": 100.0,
+      "count": 2,
+      "severity": 2
+     },
+     {
+      "topic": "Room & Property",
+      "pct": 100.0,
+      "count": 2,
+      "severity": 2
+     },
+     {
+      "topic": "Staff & Service",
+      "pct": 100.0,
+      "count": 2,
+      "severity": 2
+     },
+     {
+      "topic": "Entertainment & Animation",
+      "pct": 50.0,
+      "count": 1,
+      "severity": 2
+     }
+    ]
+   },
+   {
+    "key": "praise",
+    "name": "Praise",
+    "stars": "4–5★",
+    "n": 4,
+    "polarity": "positive",
+    "themes": [
+     {
+      "topic": "Food & Drink",
+      "pct": 100.0,
+      "count": 4,
+      "severity": 3
+     },
+     {
+      "topic": "Room & Property",
+      "pct": 75.0,
+      "count": 3,
+      "severity": 1
+     },
+     {
+      "topic": "Staff & Service",
+      "pct": 75.0,
+      "count": 3,
+      "severity": 3
+     },
+     {
+      "topic": "Pool & Beach",
+      "pct": 50.0,
+      "count": 2,
+      "severity": 2
+     },
+     {
+      "topic": "Entertainment & Animation",
+      "pct": 25.0,
+      "count": 1,
+      "severity": 1
+     },
+     {
+      "topic": "Location",
+      "pct": 25.0,
+      "count": 1,
+      "severity": 1
+     }
+    ]
+   }
+  ],
+  "priorities": [
+   {
+    "rank": 1,
+    "topic": "Room & Property",
+    "score": 100,
+    "polarity": "negative",
+    "mentions": 23,
+    "recent": 5,
+    "avg_severity": 2.1,
+    "quotes": [
+     {
+      "text": "We stay in this hotel with two small children and it was worst.",
+      "rating": 1,
+      "date": "2026-07-19",
+      "id": "showcase-10"
+     },
+     {
+      "text": "family holiday Room was dirty when we arrive, ants was everywhere and some part of wall was falling.",
+      "rating": 1,
+      "date": "2026-07-19",
+      "id": "showcase-10"
+     },
+     {
+      "text": "This was the worst stay I have had in the region.",
+      "rating": 1,
+      "date": "2026-07-26",
+      "id": "showcase-09"
+     }
+    ]
+   },
+   {
+    "rank": 2,
+    "topic": "Staff & Service",
+    "score": 87,
+    "polarity": "negative",
+    "mentions": 20,
+    "recent": 3,
+    "avg_severity": 2.5,
+    "quotes": [
+     {
+      "text": "sometimes someone come to paint face or give paper, but no timetable and no organization.",
+      "rating": 1,
+      "date": "2026-07-19",
+      "id": "showcase-10"
+     },
+     {
+      "text": "We ask reception but nothing change.",
+      "rating": 1,
+      "date": "2026-07-19",
+      "id": "showcase-10"
+     },
+     {
+      "text": "We not recommend for family.",
+      "rating": 1,
+      "date": "2026-07-19",
+      "id": "showcase-10"
+     }
+    ]
+   },
+   {
+    "rank": 3,
+    "topic": "Food & Drink",
+    "score": 57,
+    "polarity": "negative",
+    "mentions": 13,
+    "recent": 2,
+    "avg_severity": 2.4,
+    "quotes": [
+     {
+      "text": "Smell of petrol was very strong like fuel station.",
+      "rating": 1,
+      "date": "2026-07-19",
+      "id": "showcase-10"
+     },
+     {
+      "text": "Restaurant was biggest problem.",
+      "rating": 1,
+      "date": "2026-07-19",
+      "id": "showcase-10"
+     },
+     {
+      "text": "Food was almost same every day, very little for children and our children almost not eat for seven days.",
+      "rating": 1,
+      "date": "2026-07-19",
+      "id": "showcase-10"
+     }
+    ]
+   },
+   {
+    "rank": 4,
+    "topic": "Pool & Beach",
+    "score": 22,
+    "polarity": "negative",
+    "mentions": 5,
+    "recent": 2,
+    "avg_severity": 2.3,
+    "quotes": [
+     {
+      "text": "Pool area was much smaller than photo and very crowded.",
+      "rating": 1,
+      "date": "2026-07-19",
+      "id": "showcase-10"
+     },
+     {
+      "text": "The only positive was the pool, which was clean.",
+      "rating": 1,
+      "date": "2026-07-26",
+      "id": "showcase-09"
+     },
+     {
+      "text": "The location and the pool were fine, but the service and food did not match the advertised standard.",
+      "rating": 2,
+      "date": "2026-08-08",
+      "id": "showcase-07"
+     }
+    ]
+   },
+   {
+    "rank": 5,
+    "topic": "Entertainment & Animation",
+    "score": 9,
+    "polarity": "negative",
+    "mentions": 2,
+    "recent": 0,
+    "avg_severity": 3.0,
+    "quotes": [
+     {
+      "text": "Kids club was not real kids club.",
+      "rating": 1,
+      "date": "2026-07-19",
+      "id": "showcase-10"
+     },
+     {
+      "text": "Evening entertainment was not for children.",
+      "rating": 1,
+      "date": "2026-07-19",
+      "id": "showcase-10"
+     }
+    ]
+   }
+  ],
+  "topics": [
+   {
+    "topic": "Room & Property",
+    "neg": 23,
+    "pos": 15,
+    "neutral": 1,
+    "neutral_quotes": [
+     {
+      "text": "We travel with small child.",
+      "rating": 2,
+      "date": "2026-08-01",
+      "id": "showcase-08"
+     }
+    ],
+    "complaints": [
+     {
+      "theme": "Maintenance & Condition",
+      "count": 8,
+      "quotes": [
+       {
+        "text": "The corridors were worn and the room needed repairs.",
+        "rating": 1,
+        "date": "2026-07-26",
+        "id": "showcase-09"
+       },
+       {
+        "text": "this was very bad.",
+        "rating": 2,
+        "date": "2026-08-01",
+        "id": "showcase-08"
+       },
+       {
+        "text": "Only bad thing was Wi-Fi very weak.",
+        "rating": 4,
+        "date": "2026-08-30",
+        "id": "showcase-04"
+       }
+      ]
+     },
+     {
+      "theme": "General Experience",
+      "count": 8,
+      "quotes": [
+       {
+        "text": "I would not recommend this hotel at the price.",
+        "rating": 1,
+        "date": "2026-07-26",
+        "id": "showcase-09"
+       },
+       {
+        "text": "All inclusive was weak.",
+        "rating": 2,
+        "date": "2026-08-01",
+        "id": "showcase-08"
+       },
+       {
+        "text": "This was the worst stay I have had in the region.",
+        "rating": 1,
+        "date": "2026-07-26",
+        "id": "showcase-09"
+       }
+      ]
+     },
+     {
+      "theme": "Cleanliness",
+      "count": 7,
+      "quotes": [
+       {
+        "text": "family holiday Room was dirty when we arrive, ants was everywhere and some part of wall was falling.",
+        "rating": 1,
+        "date": "2026-07-19",
+        "id": "showcase-10"
+       },
+       {
+        "text": "Hotel building look like castle- very beautiful, But we had big problem with ants in room.",
+        "rating": 3,
+        "date": "2026-08-15",
+        "id": "showcase-06"
+       },
+       {
+        "text": "when maintenance arrived, the drain was full of hair and dirt and smelled terrible.",
+        "rating": 1,
+        "date": "2026-07-26",
+        "id": "showcase-09"
+       }
+      ]
+     }
+    ],
+    "praise": [
+     {
+      "theme": "General Experience",
+      "count": 6,
+      "quotes": [
+       {
+        "text": "We booked this hotel because price was good.",
+        "rating": 4,
+        "date": "2026-08-30",
+        "id": "showcase-04"
+       },
+       {
+        "text": "That set the tone.",
+        "rating": 3,
+        "date": "2026-08-22",
+        "id": "showcase-05"
+       },
+       {
+        "text": "For this money we was happy and children was happy too.",
+        "rating": 4,
+        "date": "2026-08-30",
+        "id": "showcase-04"
+       }
+      ]
+     },
+     {
+      "theme": "Cleanliness",
+      "count": 4,
+      "quotes": [
+       {
+        "text": "Room was clean, balcony was nice and cleaning lady came every day.",
+        "rating": 5,
+        "date": "2026-09-14",
+        "id": "showcase-02"
+       },
+       {
+        "text": "Bathroom have open shower and water go on floor.",
+        "rating": 5,
+        "date": "2026-09-14",
+        "id": "showcase-02"
+       },
+       {
+        "text": "Our room was spacious, quiet and cleaned properly every day.",
+        "rating": 5,
+        "date": "2026-09-20",
+        "id": "showcase-01"
+       }
+      ]
+     },
+     {
+      "theme": "Comfort",
+      "count": 3,
+      "quotes": [
+       {
+        "text": "Air condition worked good, maybe too cold in the night but we could turn it off.",
+        "rating": 5,
+        "date": "2026-09-14",
+        "id": "showcase-02"
+       },
+       {
+        "text": "The sea-view room was fine and cleaned every day and the air conditioning worked, though it was clearly old, and the room warmed up quickly once the door opened.",
+        "rating": 3,
+        "date": "2026-08-22",
+        "id": "showcase-05"
+       },
+       {
+        "text": "We came home relaxed and would book again.",
+        "rating": 5,
+        "date": "2026-09-20",
+        "id": "showcase-01"
+       }
+      ]
+     },
+     {
+      "theme": "Maintenance & Condition",
+      "count": 2,
+      "quotes": [
+       {
+        "text": "Room was big with balcony, maybe a little old but clean.",
+        "rating": 4,
+        "date": "2026-08-30",
+        "id": "showcase-04"
+       },
+       {
+        "text": "We will come back with family.",
+        "rating": 5,
+        "date": "2026-09-14",
+        "id": "showcase-02"
+       }
+      ]
+     }
+    ]
+   },
+   {
+    "topic": "Staff & Service",
+    "neg": 20,
+    "pos": 9,
+    "neutral": 0,
+    "neutral_quotes": [],
+    "complaints": [
+     {
+      "theme": "Reception & Check-in/out",
+      "count": 10,
+      "quotes": [
+       {
+        "text": "On reception they say check-in is two o'clock.",
+        "rating": 2,
+        "date": "2026-08-01",
+        "id": "showcase-08"
+       },
+       {
+        "text": "Check-in was advertised from two o'clock but our room was still not ready at a quarter to three.",
+        "rating": 2,
+        "date": "2026-08-08",
+        "id": "showcase-07"
+       },
+       {
+        "text": "We understand room not ready but nobody show us where to leave luggage, where to eat or even give water.",
+        "rating": 2,
+        "date": "2026-08-01",
+        "id": "showcase-08"
+       }
+      ]
+     },
+     {
+      "theme": "Service Responsiveness",
+      "count": 5,
+      "quotes": [
+       {
+        "text": "Waiter almost never come to table.",
+        "rating": 2,
+        "date": "2026-08-01",
+        "id": "showcase-08"
+       },
+       {
+        "text": "sometimes someone come to paint face or give paper, but no timetable and no organization.",
+        "rating": 1,
+        "date": "2026-07-19",
+        "id": "showcase-10"
+       },
+       {
+        "text": "Check-in was meant to be from two and at a quarter to three we were still waiting.",
+        "rating": 1,
+        "date": "2026-07-26",
+        "id": "showcase-09"
+       }
+      ]
+     },
+     {
+      "theme": "Staff Attitude",
+      "count": 4,
+      "quotes": [
+       {
+        "text": "We not recommend for family.",
+        "rating": 1,
+        "date": "2026-07-19",
+        "id": "showcase-10"
+       },
+       {
+        "text": "One chef was rude when we asked about an option for our child.",
+        "rating": 2,
+        "date": "2026-08-08",
+        "id": "showcase-07"
+       },
+       {
+        "text": "Reception staff were rude and kept answering the phone while we stood there.",
+        "rating": 1,
+        "date": "2026-07-26",
+        "id": "showcase-09"
+       }
+      ]
+     },
+     {
+      "theme": "General Experience",
+      "count": 1,
+      "quotes": [
+       {
+        "text": "The dining room was the weakest part: hot, crowded, and the food felt recycled from one service to the next.",
+        "rating": 3,
+        "date": "2026-08-22",
+        "id": "showcase-05"
+       }
+      ]
+     }
+    ],
+    "praise": [
+     {
+      "theme": "Staff Attitude",
+      "count": 5,
+      "quotes": [
+       {
+        "text": "It was big help for us.",
+        "rating": 5,
+        "date": "2026-09-14",
+        "id": "showcase-02"
+       },
+       {
+        "text": "everyone was warm without being pushy.",
+        "rating": 5,
+        "date": "2026-09-20",
+        "id": "showcase-01"
+       },
+       {
+        "text": "staff in restaurant was friendly and bring coffee fast.",
+        "rating": 5,
+        "date": "2026-09-14",
+        "id": "showcase-02"
+       }
+      ]
+     },
+     {
+      "theme": "Reception & Check-in/out",
+      "count": 4,
+      "quotes": [
+       {
+        "text": "They saw my mother with us and gave us room before normal check-in time.",
+        "rating": 5,
+        "date": "2026-09-14",
+        "id": "showcase-02"
+       },
+       {
+        "text": "We arrived very early after night travel and reception staff was very kind.",
+        "rating": 5,
+        "date": "2026-09-14",
+        "id": "showcase-02"
+       },
+       {
+        "text": "Staff in restaurant clean tables fast and we always find place for four.",
+        "rating": 4,
+        "date": "2026-08-30",
+        "id": "showcase-04"
+       }
+      ]
+     }
+    ]
+   },
+   {
+    "topic": "Food & Drink",
+    "neg": 13,
+    "pos": 14,
+    "neutral": 0,
+    "neutral_quotes": [],
+    "complaints": [
+     {
+      "theme": "Food Quality",
+      "count": 7,
+      "quotes": [
+       {
+        "text": "The restaurant was basic fish every day, food often cold even at the start of service and flies around the buffet.",
+        "rating": 2,
+        "date": "2026-08-08",
+        "id": "showcase-07"
+       },
+       {
+        "text": "We reached the hotel around ten at night after a full day of travel, and were not offered anything to eat, not even a cold plate.",
+        "rating": 3,
+        "date": "2026-08-22",
+        "id": "showcase-05"
+       },
+       {
+        "text": "With a few fixes this could be a good hotel, but the food and arrival need work.",
+        "rating": 3,
+        "date": "2026-08-22",
+        "id": "showcase-05"
+       }
+      ]
+     },
+     {
+      "theme": "Drinks & Bar",
+      "count": 3,
+      "quotes": [
+       {
+        "text": "When I asked, I was told to get drinks from the bar.",
+        "rating": 2,
+        "date": "2026-08-08",
+        "id": "showcase-07"
+       },
+       {
+        "text": "Only one bar for whole hotel and you must be dressed before you can take drink after pool or beach.",
+        "rating": 2,
+        "date": "2026-08-01",
+        "id": "showcase-08"
+       },
+       {
+        "text": "The bar ran out of regular cola two days into the holiday and did not have it again for a week.",
+        "rating": 2,
+        "date": "2026-08-08",
+        "id": "showcase-07"
+       }
+      ]
+     },
+     {
+      "theme": "General Experience",
+      "count": 2,
+      "quotes": [
+       {
+        "text": "We understand room not ready but nobody show us where to leave luggage, where to eat or even give water.",
+        "rating": 2,
+        "date": "2026-08-01",
+        "id": "showcase-08"
+       },
+       {
+        "text": "The room was dated, no towels were provided, the fridge was rusty and the only thing inside was one bottle of water.",
+        "rating": 2,
+        "date": "2026-08-08",
+        "id": "showcase-07"
+       }
+      ]
+     },
+     {
+      "theme": "Food Variety & Repetition",
+      "count": 1,
+      "quotes": [
+       {
+        "text": "Food was almost same every day, very little for children and our children almost not eat for seven days.",
+        "rating": 1,
+        "date": "2026-07-19",
+        "id": "showcase-10"
+       }
+      ]
+     }
+    ],
+    "praise": [
+     {
+      "theme": "Breakfast",
+      "count": 5,
+      "quotes": [
+       {
+        "text": "you can ask omelette or eggs.",
+        "rating": 4,
+        "date": "2026-08-30",
+        "id": "showcase-04"
+       },
+       {
+        "text": "Breakfast was better than dinner.",
+        "rating": 3,
+        "date": "2026-08-22",
+        "id": "showcase-05"
+       },
+       {
+        "text": "Breakfast was good.",
+        "rating": 5,
+        "date": "2026-09-14",
+        "id": "showcase-02"
+       }
+      ]
+     },
+     {
+      "theme": "Drinks & Bar",
+      "count": 4,
+      "quotes": [
+       {
+        "text": "Bar have good beer and wine.",
+        "rating": 4,
+        "date": "2026-08-30",
+        "id": "showcase-04"
+       },
+       {
+        "text": "bartender make colorful drinks.",
+        "rating": 4,
+        "date": "2026-08-30",
+        "id": "showcase-04"
+       },
+       {
+        "text": "Staff in restaurant clean tables fast and we always find place for four.",
+        "rating": 4,
+        "date": "2026-08-30",
+        "id": "showcase-04"
+       }
+      ]
+     },
+     {
+      "theme": "Food Quality",
+      "count": 3,
+      "quotes": [
+       {
+        "text": "Food was very good and big choice: many vegetables, fruit every day, ice cream for dinner and nice cakes In morning.",
+        "rating": 4,
+        "date": "2026-08-30",
+        "id": "showcase-04"
+       },
+       {
+        "text": "Food was better than we expect from other reviews: grill have new thing every day and ice cream at dinner.",
+        "rating": 3,
+        "date": "2026-08-15",
+        "id": "showcase-06"
+       },
+       {
+        "text": "Food was the best part: a large dinner buffet with fish, shellfish, grilled meat and a good dessert table plus local pastries every day.",
+        "rating": 4,
+        "date": "2026-09-06",
+        "id": "showcase-03"
+       }
+      ]
+     },
+     {
+      "theme": "Food Variety & Repetition",
+      "count": 2,
+      "quotes": [
+       {
+        "text": "Some hotels impress with their building, others with their food or their pool.",
+        "rating": 5,
+        "date": "2026-09-20",
+        "id": "showcase-01"
+       },
+       {
+        "text": "Lunch at the beach restaurant was simpler For the price, a good stay if you care more about the beach and food than a new room.",
+        "rating": 4,
+        "date": "2026-09-06",
+        "id": "showcase-03"
+       }
+      ]
+     }
+    ]
+   },
+   {
+    "topic": "Pool & Beach",
+    "neg": 5,
+    "pos": 6,
+    "neutral": 0,
+    "neutral_quotes": [],
+    "complaints": [
+     {
+      "theme": "Pool Condition",
+      "count": 4,
+      "quotes": [
+       {
+        "text": "The only positive was the pool, which was clean.",
+        "rating": 1,
+        "date": "2026-07-26",
+        "id": "showcase-09"
+       },
+       {
+        "text": "The pool itself was clean, although flies and ants were present around it.",
+        "rating": 3,
+        "date": "2026-08-22",
+        "id": "showcase-05"
+       },
+       {
+        "text": "Pool area was much smaller than photo and very crowded.",
+        "rating": 1,
+        "date": "2026-07-19",
+        "id": "showcase-10"
+       }
+      ]
+     },
+     {
+      "theme": "General Experience",
+      "count": 1,
+      "quotes": [
+       {
+        "text": "The location and the pool were fine, but the service and food did not match the advertised standard.",
+        "rating": 2,
+        "date": "2026-08-08",
+        "id": "showcase-07"
+       }
+      ]
+     }
+    ],
+    "praise": [
+     {
+      "theme": "Pool Condition",
+      "count": 3,
+      "quotes": [
+       {
+        "text": "Pool was very nice: good size, water, clean and small slides for children in separate pool.",
+        "rating": 3,
+        "date": "2026-08-15",
+        "id": "showcase-06"
+       },
+       {
+        "text": "The spa was calm and spotless, the gym had proper equipment and the pool was clean enough to see the bottom.",
+        "rating": 5,
+        "date": "2026-09-20",
+        "id": "showcase-01"
+       },
+       {
+        "text": "The grounds are the first thing you notice: paths between palms and flowers, small frogs near the bungalows and a pool area with a swim-up bar.",
+        "rating": 4,
+        "date": "2026-09-06",
+        "id": "showcase-03"
+       }
+      ]
+     },
+     {
+      "theme": "Beach",
+      "count": 2,
+      "quotes": [
+       {
+        "text": "The beach is wide and the water was warm and clear.",
+        "rating": 4,
+        "date": "2026-09-06",
+        "id": "showcase-03"
+       },
+       {
+        "text": "The beach was a short walk away and never felt crowded.",
+        "rating": 5,
+        "date": "2026-09-20",
+        "id": "showcase-01"
+       }
+      ]
+     },
+     {
+      "theme": "General Experience",
+      "count": 1,
+      "quotes": [
+       {
+        "text": "Some hotels impress with their building, others with their food or their pool.",
+        "rating": 5,
+        "date": "2026-09-20",
+        "id": "showcase-01"
+       }
+      ]
+     }
+    ]
+   },
+   {
+    "topic": "Entertainment & Animation",
+    "neg": 2,
+    "pos": 5,
+    "neutral": 0,
+    "neutral_quotes": [],
+    "complaints": [
+     {
+      "theme": "Kids Club",
+      "count": 1,
+      "quotes": [
+       {
+        "text": "Kids club was not real kids club.",
+        "rating": 1,
+        "date": "2026-07-19",
+        "id": "showcase-10"
+       }
+      ]
+     },
+     {
+      "theme": "Shows & Evening Entertainment",
+      "count": 1,
+      "quotes": [
+       {
+        "text": "Evening entertainment was not for children.",
+        "rating": 1,
+        "date": "2026-07-19",
+        "id": "showcase-10"
+       }
+      ]
+     }
+    ],
+    "praise": [
+     {
+      "theme": "Animation Team",
+      "count": 3,
+      "quotes": [
+       {
+        "text": "Animation team was excellent.",
+        "rating": 3,
+        "date": "2026-08-15",
+        "id": "showcase-06"
+       },
+       {
+        "text": "Animation team was very friendly.",
+        "rating": 4,
+        "date": "2026-08-30",
+        "id": "showcase-04"
+       },
+       {
+        "text": "they do aqua gym, darts, volleyball, foam, party in pool.",
+        "rating": 4,
+        "date": "2026-08-30",
+        "id": "showcase-04"
+       }
+      ]
+     },
+     {
+      "theme": "Shows & Evening Entertainment",
+      "count": 1,
+      "quotes": [
+       {
+        "text": "Evening show was simple, karaoke or dance, but it was nice.",
+        "rating": 4,
+        "date": "2026-08-30",
+        "id": "showcase-04"
+       }
+      ]
+     },
+     {
+      "theme": "Kids Club",
+      "count": 1,
+      "quotes": [
+       {
+        "text": "they make foam party, zumba and games every day and our children was very happy.",
+        "rating": 3,
+        "date": "2026-08-15",
+        "id": "showcase-06"
+       }
+      ]
+     }
+    ]
+   },
+   {
+    "topic": "Spa & Wellness",
+    "neg": 0,
+    "pos": 1,
+    "neutral": 0,
+    "neutral_quotes": [],
+    "complaints": [],
+    "praise": [
+     {
+      "theme": "Spa Facilities",
+      "count": 1,
+      "quotes": [
+       {
+        "text": "The spa was calm and spotless, the gym had proper equipment and the pool was clean enough to see the bottom.",
+        "rating": 5,
+        "date": "2026-09-20",
+        "id": "showcase-01"
+       }
+      ]
+     }
+    ]
+   }
+  ],
+  "mention_totals": {
+   "negative": 51,
+   "neutral": 1,
+   "positive": 43
+  }
+ },
+ "reviews": [
+  {
+   "id": "showcase-01",
+   "rating": 5,
+   "bucket": "praise",
+   "text": "Some hotels impress with their building, others with their food or their pool. What made this stay different was the way the staff treated us as a family with two children. From the first email before arrival to the last morning, everyone was warm without being pushy. Our room was spacious, quiet and cleaned properly every day. Breakfast and dinner had a wide choice, and the kitchen handled a small request for our younger child without making it feel like a problem. The spa was calm and spotless, the gym had proper equipment, and the pool was clean enough to see the bottom. The beach was a short walk away and never felt crowded. We came home relaxed and would book again.",
+   "language": "",
+   "date": "2026-09-20",
+   "owner": ""
+  },
+  {
+   "id": "showcase-02",
+   "rating": 5,
+   "bucket": "praise",
+   "text": "We arrived very early after night travel and reception staff was very kind. They saw my mother with us and gave us room before normal check-in time. It was big help for us. Room was clean, balcony was nice, and cleaning lady came every day. Air condition worked good, maybe too cold in the night, but we could turn it off. Bathroom have open shower and water go on floor, so we use the squeegee after. Not big problem, but old people need to be careful. Breakfast was good, staff in restaurant was friendly and bring coffee fast. We asked for room near lift and they gave us exactly this. Very good service. We will come back with family.",
+   "language": "",
+   "date": "2026-09-14",
+   "owner": ""
+  },
+  {
+   "id": "showcase-03",
+   "rating": 4,
+   "bucket": "praise",
+   "text": "The grounds are the first thing you notice: paths between palms and flowers, small frogs near the bungalows, and a pool area with a swim-up bar. The beach is wide and the water was warm and clear; the only annoyance was finding a free lounger after breakfast. Our bungalow was comfortable but showed its age. There was a musty smell, the bath drained slowly, and the safe cost extra. Wi-Fi was almost useless, so we stopped trying. Food was the best part: a large dinner buffet with fish, shellfish, grilled meat and a good dessert table, plus local pastries every day. Lunch at the beach restaurant was simpler. For the price, a good stay if you care more about the beach and food than a new room.",
+   "language": "",
+   "date": "2026-09-06",
+   "owner": ""
+  },
+  {
+   "id": "showcase-04",
+   "rating": 4,
+   "bucket": "praise",
+   "text": "We booked this hotel because price was good, we did not expect too much. It was pleasant surprise. Food was very good and big choice, many vegetables, fruit every day, ice cream for dinner and nice cakes. In morning you can ask omelette or eggs. Staff in restaurant clean tables fast and we always find place for four. Bar have good beer and wine, bartender make colorful drinks. Animation team was very friendly, they do aqua gym, darts, volleyball, foam party in pool. Evening show was simple, karaoke or dance, but it was nice. Room was big with balcony, maybe a little old, but clean. Only bad thing was Wi-Fi, very weak. For this money we was happy and children was happy too.",
+   "language": "",
+   "date": "2026-08-30",
+   "owner": ""
+  },
+  {
+   "id": "showcase-05",
+   "rating": 3,
+   "bucket": "mixed",
+   "text": "We reached the hotel around ten at night after a full day of travel and were not offered anything to eat, not even a cold plate. That set the tone. The sea-view room was fine and cleaned every day, and the air conditioning worked, though it was clearly old and the room warmed up quickly once the door opened. The open layout is attractive but brings a lot of birds; droppings were common on ledges and around the pool. The pool itself was clean, although flies and ants were present around it. The dining room was the weakest part: hot, crowded and the food felt recycled from one service to the next. Breakfast was better than dinner. With a few fixes this could be a good hotel, but the food and arrival need work.",
+   "language": "",
+   "date": "2026-08-22",
+   "owner": ""
+  },
+  {
+   "id": "showcase-06",
+   "rating": 3,
+   "bucket": "mixed",
+   "text": "Pool was very nice, good size, water clean, and small slides for children in separate pool. Animation team was excellent, they make foam party, zumba and games every day, and our children was very happy. Food was better than we expect from other reviews, grill have new thing every day and ice cream at dinner. Hotel building look like castle, very beautiful. But we had big problem with ants in room. First day housekeeping spray, but in evening ants was on beds. We ask reception to change room and receptionist was rude, say no other room and we must deal with it. We have small children, this was not acceptable. We stay in room with ants and avoid reception after this. Very sad because hotel have good parts.",
+   "language": "",
+   "date": "2026-08-15",
+   "owner": ""
+  },
+  {
+   "id": "showcase-07",
+   "rating": 2,
+   "bucket": "critical",
+   "text": "Check-in was advertised from two o'clock, but our room was still not ready at a quarter to three. Reception was cold about it. The room was dated; no towels were provided, the fridge was rusty, and the only thing inside was one bottle of water. When I asked, I was told to get drinks from the bar. The bar ran out of regular cola two days into the holiday and did not have it again for a week. The restaurant was basic: fish every day, food often cold even at the start of service, and flies around the buffet. One chef was rude when we asked about an option for our child. The location and the pool were fine, but the service and food did not match the advertised standard.",
+   "language": "",
+   "date": "2026-08-08",
+   "owner": ""
+  },
+  {
+   "id": "showcase-08",
+   "rating": 2,
+   "bucket": "critical",
+   "text": "Flight from our country was in night and we arrive in hotel after five in morning. On reception they say check-in is two o'clock. We understand room not ready, but nobody show us where to leave luggage, where to eat or even give water. We travel with small child, this was very bad. All inclusive was weak. Only one bar for whole hotel and you must be dressed before you can take drink after pool or beach. Waiter almost never come to table. When I ask to bring drink, waiter say he will not bring, too many people and later everyone want same. Food was okay but not many choice for child. Hotel look nice from outside, but service was not like family hotel. We not come back.",
+   "language": "",
+   "date": "2026-08-01",
+   "owner": ""
+  },
+  {
+   "id": "showcase-09",
+   "rating": 1,
+   "bucket": "critical",
+   "text": "This was the worst stay I have had in the region. Check-in was meant to be from two, and at a quarter to three we were still waiting. Reception staff were rude and kept answering the phone while we stood there. The corridors were worn and the room needed repairs. There were only five hangers and no proper storage. The shower did not drain and flooded the bathroom; when maintenance arrived, the drain was full of hair and dirt and smelled terrible. The room phone did not work, and we were told that none of the hotel phones worked. Wi-Fi was advertised but did not work either. The only positive was the pool, which was clean. I would not recommend this hotel at the price.",
+   "language": "",
+   "date": "2026-07-26",
+   "owner": ""
+  },
+  {
+   "id": "showcase-10",
+   "rating": 1,
+   "bucket": "critical",
+   "text": "We stay in this hotel with two small children and it was worst family holiday. Room was dirty when we arrive, ants was everywhere, and some part of wall was falling. Pool area was much smaller than photo and very crowded. Kids club was not real kids club, sometimes someone come to paint face or give paper, but no timetable and no organization. Evening entertainment was not for children: man break bottles, walk on broken glass, lie on sword and use petrol for fire. Smell of petrol was very strong, like fuel station. Restaurant was biggest problem. Food was almost same every day, very little for children, and our children almost not eat for seven days. We ask reception, but nothing change. We not recommend for family.",
+   "language": "",
+   "date": "2026-07-19",
+   "owner": ""
+  }
+ ],
+ "mentions": [
+  [
+   "Food & Drink",
+   "positive",
+   "Food Variety & Repetition",
+   0.0128,
+   5,
+   "2026-09-20",
+   "Some hotels impress with their building, others with their food or their pool.",
+   "showcase-01"
+  ],
+  [
+   "Staff & Service",
+   "positive",
+   "Staff Attitude",
+   0.0092,
+   5,
+   "2026-09-20",
+   "What made this stay different was the way the staff treated us as a family with two children, From the first email before arrival to the last morning.",
+   "showcase-01"
+  ],
+  [
+   "Staff & Service",
+   "positive",
+   "Staff Attitude",
+   0.0251,
+   5,
+   "2026-09-20",
+   "everyone was warm without being pushy.",
+   "showcase-01"
+  ],
+  [
+   "Room & Property",
+   "positive",
+   "Cleanliness",
+   0.0139,
+   5,
+   "2026-09-20",
+   "Our room was spacious, quiet and cleaned properly every day.",
+   "showcase-01"
+  ],
+  [
+   "Food & Drink",
+   "positive",
+   "Breakfast",
+   0.0072,
+   5,
+   "2026-09-20",
+   "Breakfast and dinner had a wide choice and the kitchen handled a small request for our younger child without making it feel like a problem.",
+   "showcase-01"
+  ],
+  [
+   "Room & Property",
+   "positive",
+   "Cleanliness",
+   0.0086,
+   5,
+   "2026-09-20",
+   "The spa was calm and spotless, the gym had proper equipment and the pool was clean enough to see the bottom.",
+   "showcase-01"
+  ],
+  [
+   "Pool & Beach",
+   "positive",
+   "Pool Condition",
+   0.0167,
+   5,
+   "2026-09-20",
+   "The spa was calm and spotless, the gym had proper equipment and the pool was clean enough to see the bottom.",
+   "showcase-01"
+  ],
+  [
+   "Spa & Wellness",
+   "positive",
+   "Spa Facilities",
+   0.0108,
+   5,
+   "2026-09-20",
+   "The spa was calm and spotless, the gym had proper equipment and the pool was clean enough to see the bottom.",
+   "showcase-01"
+  ],
+  [
+   "Pool & Beach",
+   "positive",
+   "Beach",
+   0.0269,
+   5,
+   "2026-09-20",
+   "The beach was a short walk away and never felt crowded.",
+   "showcase-01"
+  ],
+  [
+   "Room & Property",
+   "positive",
+   "Comfort",
+   0.0017,
+   5,
+   "2026-09-20",
+   "We came home relaxed and would book again.",
+   "showcase-01"
+  ],
+  [
+   "Staff & Service",
+   "positive",
+   "Reception & Check-in/out",
+   0.0043,
+   5,
+   "2026-09-14",
+   "We arrived very early after night travel and reception staff was very kind.",
+   "showcase-02"
+  ],
+  [
+   "Staff & Service",
+   "positive",
+   "Reception & Check-in/out",
+   0.0071,
+   5,
+   "2026-09-14",
+   "They saw my mother with us and gave us room before normal check-in time.",
+   "showcase-02"
+  ],
+  [
+   "Staff & Service",
+   "positive",
+   "Staff Attitude",
+   0.0288,
+   5,
+   "2026-09-14",
+   "It was big help for us.",
+   "showcase-02"
+  ],
+  [
+   "Room & Property",
+   "positive",
+   "Cleanliness",
+   0.0313,
+   5,
+   "2026-09-14",
+   "Room was clean, balcony was nice and cleaning lady came every day.",
+   "showcase-02"
+  ],
+  [
+   "Room & Property",
+   "positive",
+   "Comfort",
+   0.0495,
+   5,
+   "2026-09-14",
+   "Air condition worked good, maybe too cold in the night but we could turn it off.",
+   "showcase-02"
+  ],
+  [
+   "Room & Property",
+   "positive",
+   "Cleanliness",
+   0.0285,
+   5,
+   "2026-09-14",
+   "Bathroom have open shower and water go on floor.",
+   "showcase-02"
+  ],
+  [
+   "Room & Property",
+   "negative",
+   "Cleanliness",
+   0.0128,
+   5,
+   "2026-09-14",
+   "so we use the squeegee after.",
+   "showcase-02"
+  ],
+  [
+   "Room & Property",
+   "negative",
+   "Maintenance & Condition",
+   0.0045,
+   5,
+   "2026-09-14",
+   "Not big problem, but old people need to be careful.",
+   "showcase-02"
+  ],
+  [
+   "Food & Drink",
+   "positive",
+   "Breakfast",
+   0.0394,
+   5,
+   "2026-09-14",
+   "Breakfast was good.",
+   "showcase-02"
+  ],
+  [
+   "Food & Drink",
+   "positive",
+   "Drinks & Bar",
+   0.0115,
+   5,
+   "2026-09-14",
+   "staff in restaurant was friendly and bring coffee fast.",
+   "showcase-02"
+  ],
+  [
+   "Staff & Service",
+   "positive",
+   "Staff Attitude",
+   0.0108,
+   5,
+   "2026-09-14",
+   "staff in restaurant was friendly and bring coffee fast.",
+   "showcase-02"
+  ],
+  [
+   "Staff & Service",
+   "positive",
+   "Reception & Check-in/out",
+   0.0004,
+   5,
+   "2026-09-14",
+   "We asked for room near lift and they gave us exactly this- Very good service.",
+   "showcase-02"
+  ],
+  [
+   "Room & Property",
+   "positive",
+   "Maintenance & Condition",
+   0.0024,
+   5,
+   "2026-09-14",
+   "We will come back with family.",
+   "showcase-02"
+  ],
+  [
+   "Pool & Beach",
+   "positive",
+   "Pool Condition",
+   0.0064,
+   4,
+   "2026-09-06",
+   "The grounds are the first thing you notice: paths between palms and flowers, small frogs near the bungalows and a pool area with a swim-up bar.",
+   "showcase-03"
+  ],
+  [
+   "Pool & Beach",
+   "positive",
+   "Beach",
+   0.0364,
+   4,
+   "2026-09-06",
+   "The beach is wide and the water was warm and clear.",
+   "showcase-03"
+  ],
+  [
+   "Food & Drink",
+   "positive",
+   "Breakfast",
+   0.0079,
+   4,
+   "2026-09-06",
+   "the only annoyance was finding a free lounger after breakfast.",
+   "showcase-03"
+  ],
+  [
+   "Room & Property",
+   "negative",
+   "Maintenance & Condition",
+   0.0046,
+   4,
+   "2026-09-06",
+   "Our bungalow was comfortable but showed its age.",
+   "showcase-03"
+  ],
+  [
+   "Room & Property",
+   "negative",
+   "Maintenance & Condition",
+   0.0025,
+   4,
+   "2026-09-06",
+   "There was a musty smell, the bath drained slowly and the safe cost extra Wi-Fi was almost useless so we stopped trying.",
+   "showcase-03"
+  ],
+  [
+   "Food & Drink",
+   "positive",
+   "Food Quality",
+   0.0117,
+   4,
+   "2026-09-06",
+   "Food was the best part: a large dinner buffet with fish, shellfish, grilled meat and a good dessert table plus local pastries every day.",
+   "showcase-03"
+  ],
+  [
+   "Food & Drink",
+   "positive",
+   "Food Variety & Repetition",
+   0.0061,
+   4,
+   "2026-09-06",
+   "Lunch at the beach restaurant was simpler For the price, a good stay if you care more about the beach and food than a new room.",
+   "showcase-03"
+  ],
+  [
+   "Food & Drink",
+   "positive",
+   "Food Quality",
+   0.0155,
+   4,
+   "2026-08-30",
+   "Food was very good and big choice: many vegetables, fruit every day, ice cream for dinner and nice cakes In morning.",
+   "showcase-04"
+  ],
+  [
+   "Food & Drink",
+   "positive",
+   "Breakfast",
+   0.0482,
+   4,
+   "2026-08-30",
+   "you can ask omelette or eggs.",
+   "showcase-04"
+  ],
+  [
+   "Food & Drink",
+   "positive",
+   "Drinks & Bar",
+   0.0143,
+   4,
+   "2026-08-30",
+   "Staff in restaurant clean tables fast and we always find place for four.",
+   "showcase-04"
+  ],
+  [
+   "Staff & Service",
+   "positive",
+   "Reception & Check-in/out",
+   0.0041,
+   4,
+   "2026-08-30",
+   "Staff in restaurant clean tables fast and we always find place for four.",
+   "showcase-04"
+  ],
+  [
+   "Food & Drink",
+   "positive",
+   "Drinks & Bar",
+   0.054,
+   4,
+   "2026-08-30",
+   "Bar have good beer and wine.",
+   "showcase-04"
+  ],
+  [
+   "Food & Drink",
+   "positive",
+   "Drinks & Bar",
+   0.0521,
+   4,
+   "2026-08-30",
+   "bartender make colorful drinks.",
+   "showcase-04"
+  ],
+  [
+   "Staff & Service",
+   "positive",
+   "Staff Attitude",
+   0.0007,
+   4,
+   "2026-08-30",
+   "bartender make colorful drinks.",
+   "showcase-04"
+  ],
+  [
+   "Entertainment & Animation",
+   "positive",
+   "Animation Team",
+   0.0258,
+   4,
+   "2026-08-30",
+   "Animation team was very friendly.",
+   "showcase-04"
+  ],
+  [
+   "Entertainment & Animation",
+   "positive",
+   "Animation Team",
+   0.0034,
+   4,
+   "2026-08-30",
+   "they do aqua gym, darts, volleyball, foam, party in pool.",
+   "showcase-04"
+  ],
+  [
+   "Entertainment & Animation",
+   "positive",
+   "Shows & Evening Entertainment",
+   0.0134,
+   4,
+   "2026-08-30",
+   "Evening show was simple, karaoke or dance, but it was nice.",
+   "showcase-04"
+  ],
+  [
+   "Room & Property",
+   "positive",
+   "Maintenance & Condition",
+   0.0068,
+   4,
+   "2026-08-30",
+   "Room was big with balcony, maybe a little old but clean.",
+   "showcase-04"
+  ],
+  [
+   "Room & Property",
+   "negative",
+   "Maintenance & Condition",
+   0.0067,
+   4,
+   "2026-08-30",
+   "Only bad thing was Wi-Fi very weak.",
+   "showcase-04"
+  ],
+  [
+   "Food & Drink",
+   "negative",
+   "Food Quality",
+   0.0141,
+   3,
+   "2026-08-22",
+   "We reached the hotel around ten at night after a full day of travel, and were not offered anything to eat, not even a cold plate.",
+   "showcase-05"
+  ],
+  [
+   "Room & Property",
+   "positive",
+   "Comfort",
+   0.0132,
+   3,
+   "2026-08-22",
+   "The sea-view room was fine and cleaned every day and the air conditioning worked, though it was clearly old, and the room warmed up quickly once the door opened.",
+   "showcase-05"
+  ],
+  [
+   "Room & Property",
+   "negative",
+   "Cleanliness",
+   0.0179,
+   3,
+   "2026-08-22",
+   "The open layout is attractive but brings a lot of birds.",
+   "showcase-05"
+  ],
+  [
+   "Pool & Beach",
+   "negative",
+   "Pool Condition",
+   0.0138,
+   3,
+   "2026-08-22",
+   "droppings were common on ledges and around the pool.",
+   "showcase-05"
+  ],
+  [
+   "Pool & Beach",
+   "negative",
+   "Pool Condition",
+   0.0223,
+   3,
+   "2026-08-22",
+   "The pool itself was clean, although flies and ants were present around it.",
+   "showcase-05"
+  ],
+  [
+   "Food & Drink",
+   "negative",
+   "Food Quality",
+   0.0004,
+   3,
+   "2026-08-22",
+   "The dining room was the weakest part: hot, crowded, and the food felt recycled from one service to the next.",
+   "showcase-05"
+  ],
+  [
+   "Food & Drink",
+   "positive",
+   "Breakfast",
+   0.0405,
+   3,
+   "2026-08-22",
+   "Breakfast was better than dinner.",
+   "showcase-05"
+  ],
+  [
+   "Food & Drink",
+   "negative",
+   "Food Quality",
+   0.0131,
+   3,
+   "2026-08-22",
+   "With a few fixes this could be a good hotel, but the food and arrival need work.",
+   "showcase-05"
+  ],
+  [
+   "Pool & Beach",
+   "positive",
+   "Pool Condition",
+   0.0406,
+   3,
+   "2026-08-15",
+   "Pool was very nice: good size, water, clean and small slides for children in separate pool.",
+   "showcase-06"
+  ],
+  [
+   "Entertainment & Animation",
+   "positive",
+   "Animation Team",
+   0.0334,
+   3,
+   "2026-08-15",
+   "Animation team was excellent.",
+   "showcase-06"
+  ],
+  [
+   "Entertainment & Animation",
+   "positive",
+   "Kids Club",
+   0.0227,
+   3,
+   "2026-08-15",
+   "they make foam party, zumba and games every day and our children was very happy.",
+   "showcase-06"
+  ],
+  [
+   "Food & Drink",
+   "positive",
+   "Food Quality",
+   0.0141,
+   3,
+   "2026-08-15",
+   "Food was better than we expect from other reviews: grill have new thing every day and ice cream at dinner.",
+   "showcase-06"
+  ],
+  [
+   "Room & Property",
+   "negative",
+   "Cleanliness",
+   0.0234,
+   3,
+   "2026-08-15",
+   "Hotel building look like castle- very beautiful, But we had big problem with ants in room.",
+   "showcase-06"
+  ],
+  [
+   "Staff & Service",
+   "negative",
+   "Reception & Check-in/out",
+   0.0057,
+   3,
+   "2026-08-15",
+   "First day housekeeping spray, but in evening ants was on beds.",
+   "showcase-06"
+  ],
+  [
+   "Staff & Service",
+   "negative",
+   "Staff Attitude",
+   0.0013,
+   3,
+   "2026-08-15",
+   "We ask reception to change room and receptionist was rude, say no other room and we must deal with it.",
+   "showcase-06"
+  ],
+  [
+   "Room & Property",
+   "negative",
+   "Cleanliness",
+   0.0097,
+   3,
+   "2026-08-15",
+   "We stay in room with ants and avoid reception after this.",
+   "showcase-06"
+  ],
+  [
+   "Staff & Service",
+   "negative",
+   "Reception & Check-in/out",
+   0.0017,
+   3,
+   "2026-08-15",
+   "We stay in room with ants and avoid reception after this.",
+   "showcase-06"
+  ],
+  [
+   "Staff & Service",
+   "negative",
+   "Reception & Check-in/out",
+   0.0138,
+   2,
+   "2026-08-08",
+   "Check-in was advertised from two o'clock but our room was still not ready at a quarter to three.",
+   "showcase-07"
+  ],
+  [
+   "Staff & Service",
+   "negative",
+   "Reception & Check-in/out",
+   0.0079,
+   2,
+   "2026-08-08",
+   "Reception was cold about it.",
+   "showcase-07"
+  ],
+  [
+   "Food & Drink",
+   "negative",
+   "Drinks & Bar",
+   0.0483,
+   2,
+   "2026-08-08",
+   "When I asked, I was told to get drinks from the bar.",
+   "showcase-07"
+  ],
+  [
+   "Staff & Service",
+   "negative",
+   "Reception & Check-in/out",
+   0.0073,
+   2,
+   "2026-08-08",
+   "When I asked, I was told to get drinks from the bar.",
+   "showcase-07"
+  ],
+  [
+   "Food & Drink",
+   "negative",
+   "Drinks & Bar",
+   0.0123,
+   2,
+   "2026-08-08",
+   "The bar ran out of regular cola two days into the holiday and did not have it again for a week.",
+   "showcase-07"
+  ],
+  [
+   "Food & Drink",
+   "negative",
+   "Food Quality",
+   0.0183,
+   2,
+   "2026-08-08",
+   "The restaurant was basic fish every day, food often cold even at the start of service and flies around the buffet.",
+   "showcase-07"
+  ],
+  [
+   "Staff & Service",
+   "negative",
+   "Service Responsiveness",
+   0.0001,
+   2,
+   "2026-08-08",
+   "The restaurant was basic fish every day, food often cold even at the start of service and flies around the buffet.",
+   "showcase-07"
+  ],
+  [
+   "Staff & Service",
+   "negative",
+   "Staff Attitude",
+   0.0098,
+   2,
+   "2026-08-08",
+   "One chef was rude when we asked about an option for our child.",
+   "showcase-07"
+  ],
+  [
+   "Staff & Service",
+   "negative",
+   "Reception & Check-in/out",
+   0.0261,
+   2,
+   "2026-08-01",
+   "On reception they say check-in is two o'clock.",
+   "showcase-08"
+  ],
+  [
+   "Staff & Service",
+   "negative",
+   "Reception & Check-in/out",
+   0.0098,
+   2,
+   "2026-08-01",
+   "We understand room not ready but nobody show us where to leave luggage, where to eat or even give water.",
+   "showcase-08"
+  ],
+  [
+   "Room & Property",
+   "neutral",
+   "",
+   0.0,
+   2,
+   "2026-08-01",
+   "We travel with small child.",
+   "showcase-08"
+  ],
+  [
+   "Room & Property",
+   "negative",
+   "Maintenance & Condition",
+   0.0101,
+   2,
+   "2026-08-01",
+   "this was very bad.",
+   "showcase-08"
+  ],
+  [
+   "Food & Drink",
+   "negative",
+   "Drinks & Bar",
+   0.0146,
+   2,
+   "2026-08-01",
+   "Only one bar for whole hotel and you must be dressed before you can take drink after pool or beach.",
+   "showcase-08"
+  ],
+  [
+   "Staff & Service",
+   "negative",
+   "Service Responsiveness",
+   0.0226,
+   2,
+   "2026-08-01",
+   "Waiter almost never come to table.",
+   "showcase-08"
+  ],
+  [
+   "Staff & Service",
+   "negative",
+   "Reception & Check-in/out",
+   0.0046,
+   2,
+   "2026-08-01",
+   "When I ask to bring drink, waiter say he will not bring too many people and later everyone want same.",
+   "showcase-08"
+  ],
+  [
+   "Food & Drink",
+   "negative",
+   "Food Quality",
+   0.0055,
+   2,
+   "2026-08-01",
+   "Food was okay but not many choice for child Hotel look nice from outside but service was not like family hotel.",
+   "showcase-08"
+  ],
+  [
+   "Staff & Service",
+   "negative",
+   "Reception & Check-in/out",
+   0.002,
+   2,
+   "2026-08-01",
+   "Food was okay but not many choice for child Hotel look nice from outside but service was not like family hotel.",
+   "showcase-08"
+  ],
+  [
+   "Staff & Service",
+   "negative",
+   "Service Responsiveness",
+   0.0026,
+   1,
+   "2026-07-26",
+   "Check-in was meant to be from two and at a quarter to three we were still waiting.",
+   "showcase-09"
+  ],
+  [
+   "Staff & Service",
+   "negative",
+   "Staff Attitude",
+   0.0062,
+   1,
+   "2026-07-26",
+   "Reception staff were rude and kept answering the phone while we stood there.",
+   "showcase-09"
+  ],
+  [
+   "Room & Property",
+   "negative",
+   "Maintenance & Condition",
+   0.0256,
+   1,
+   "2026-07-26",
+   "The corridors were worn and the room needed repairs.",
+   "showcase-09"
+  ],
+  [
+   "Room & Property",
+   "negative",
+   "Cleanliness",
+   0.0133,
+   1,
+   "2026-07-26",
+   "The shower did not drain and flooded the bathroom.",
+   "showcase-09"
+  ],
+  [
+   "Room & Property",
+   "negative",
+   "Cleanliness",
+   0.0197,
+   1,
+   "2026-07-26",
+   "when maintenance arrived, the drain was full of hair and dirt and smelled terrible.",
+   "showcase-09"
+  ],
+  [
+   "Staff & Service",
+   "negative",
+   "Service Responsiveness",
+   0.002,
+   1,
+   "2026-07-26",
+   "when maintenance arrived, the drain was full of hair and dirt and smelled terrible.",
+   "showcase-09"
+  ],
+  [
+   "Room & Property",
+   "negative",
+   "Maintenance & Condition",
+   0.0004,
+   1,
+   "2026-07-26",
+   "The room phone did not work and we were told that none of the hotel phones worked.",
+   "showcase-09"
+  ],
+  [
+   "Pool & Beach",
+   "negative",
+   "Pool Condition",
+   0.0258,
+   1,
+   "2026-07-26",
+   "The only positive was the pool, which was clean.",
+   "showcase-09"
+  ],
+  [
+   "Room & Property",
+   "negative",
+   "Maintenance & Condition",
+   0.0002,
+   1,
+   "2026-07-19",
+   "We stay in this hotel with two small children and it was worst.",
+   "showcase-10"
+  ],
+  [
+   "Room & Property",
+   "negative",
+   "Cleanliness",
+   0.0244,
+   1,
+   "2026-07-19",
+   "family holiday Room was dirty when we arrive, ants was everywhere and some part of wall was falling.",
+   "showcase-10"
+  ],
+  [
+   "Pool & Beach",
+   "negative",
+   "Pool Condition",
+   0.0208,
+   1,
+   "2026-07-19",
+   "Pool area was much smaller than photo and very crowded.",
+   "showcase-10"
+  ],
+  [
+   "Entertainment & Animation",
+   "negative",
+   "Kids Club",
+   0.0344,
+   1,
+   "2026-07-19",
+   "Kids club was not real kids club.",
+   "showcase-10"
+  ],
+  [
+   "Staff & Service",
+   "negative",
+   "Service Responsiveness",
+   0.007,
+   1,
+   "2026-07-19",
+   "sometimes someone come to paint face or give paper, but no timetable and no organization.",
+   "showcase-10"
+  ],
+  [
+   "Entertainment & Animation",
+   "negative",
+   "Shows & Evening Entertainment",
+   0.0385,
+   1,
+   "2026-07-19",
+   "Evening entertainment was not for children.",
+   "showcase-10"
+  ],
+  [
+   "Food & Drink",
+   "negative",
+   "Food Quality",
+   0.0075,
+   1,
+   "2026-07-19",
+   "Smell of petrol was very strong like fuel station.",
+   "showcase-10"
+  ],
+  [
+   "Food & Drink",
+   "negative",
+   "Food Quality",
+   0.0054,
+   1,
+   "2026-07-19",
+   "Restaurant was biggest problem.",
+   "showcase-10"
+  ],
+  [
+   "Food & Drink",
+   "negative",
+   "Food Variety & Repetition",
+   0.0011,
+   1,
+   "2026-07-19",
+   "Food was almost same every day, very little for children and our children almost not eat for seven days.",
+   "showcase-10"
+  ],
+  [
+   "Staff & Service",
+   "negative",
+   "Reception & Check-in/out",
+   0.001,
+   1,
+   "2026-07-19",
+   "We ask reception but nothing change.",
+   "showcase-10"
+  ],
+  [
+   "Staff & Service",
+   "negative",
+   "Staff Attitude",
+   0.0194,
+   1,
+   "2026-07-19",
+   "We not recommend for family.",
+   "showcase-10"
+  ]
+ ],
+ "taxonomy": {
+  "Room & Property": {
+   "Cleanliness": "dirt, stains, smell, hygiene of anything in the room",
+   "Comfort": "bed, mattress, pillows, sleep, room temperature and air conditioning, stuffiness",
+   "Maintenance & Condition": "broken or failing things, wear, dated decor, refurbishment, building condition, power failures",
+   "General Experience": "overall experience and general impression, star rating, value for money, the stay as a whole"
+  },
+  "Food & Drink": {
+   "Food Quality": "taste, freshness, food temperature, cooking",
+   "Food Variety & Repetition": "selection and monotony of the menu",
+   "Breakfast": "breakfast specifically",
+   "Drinks & Bar": "alcoholic drinks, cocktails, soft drinks, bar availability and service",
+   "General Experience": "overall food verdict with no specific feature"
+  },
+  "Staff & Service": {
+   "Reception & Check-in/out": "front desk, check-in/out, key cards, desk bookings",
+   "Staff Attitude": "friendliness, rudeness, helpfulness, kindness of people",
+   "Service Responsiveness": "how requests and complaints are handled, follow-up",
+   "Management & Policies": "management, billing, rules, tips policy, pricing disputes",
+   "General Experience": "overall service verdict with no specific feature"
+  },
+  "Pool & Beach": {
+   "Pool Condition": "pool water, size, cleanliness, temperature",
+   "Beach": "beach sand, cleanliness, size, seaweed",
+   "Sunbeds & Towels": "sunbeds, loungers, parasols, towels",
+   "General Experience": "overall pool or beach verdict with no specific feature"
+  },
+  "Spa & Wellness": {
+   "Treatments & Massage": "massages, steam bath, treatments",
+   "Spa Facilities": "jacuzzi, sauna, steam room, facility condition",
+   "Price & Value": "pricing and value for money",
+   "General Experience": "overall spa verdict with no specific feature"
+  },
+  "Entertainment & Animation": {
+   "Animation Team": "animation and entertainment staff",
+   "Shows & Evening Entertainment": "evening shows and performances",
+   "Kids Club": "kids and mini club specifically",
+   "General Experience": "overall entertainment verdict with no specific feature"
+  }
+ }
+}

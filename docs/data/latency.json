@@ -1,0 +1,242 @@
+{
+  "generated": "2026-11-05",
+  "environment": {
+    "python": "3.11.9",
+    "platform": "Windows-10-10.0.26200-SP0",
+    "processor": "AMD64 Family 25 Model 117 Stepping 2, AuthenticAMD",
+    "torch": "2.6.0+cu124",
+    "cuda": true,
+    "gpu": "NVIDIA GeForce RTX 4050 Laptop GPU"
+  },
+  "note": "cold model load each run; /api/data is a warm recompute from the built database",
+  "sizes": {
+    "10": {
+      "input_rows": 10,
+      "runs": 3,
+      "summary": {
+        "probe_load": {
+          "median_ms": 78.0,
+          "p95_ms": 86.0,
+          "min_ms": 70.0
+        },
+        "segment": {
+          "median_ms": 4717.0,
+          "p95_ms": 4854.0,
+          "min_ms": 4663.0
+        },
+        "classify": {
+          "median_ms": 1578.0,
+          "p95_ms": 1701.0,
+          "min_ms": 1551.0
+        },
+        "embed_facets": {
+          "median_ms": 6377.0,
+          "p95_ms": 6928.0,
+          "min_ms": 6006.0
+        },
+        "sentiment": {
+          "median_ms": 601.0,
+          "p95_ms": 610.0,
+          "min_ms": 587.0
+        },
+        "rules_facets_write": {
+          "median_ms": 7.0,
+          "p95_ms": 8.0,
+          "min_ms": 6.0
+        },
+        "total": {
+          "median_ms": 13437.0,
+          "p95_ms": 14026.0,
+          "min_ms": 12965.0
+        },
+        "normalize": {
+          "median_ms": 88.7,
+          "p95_ms": 90.0,
+          "min_ms": 85.0
+        },
+        "aggregate": {
+          "median_ms": 96.9,
+          "p95_ms": 100.1,
+          "min_ms": 91.9
+        },
+        "build_data": {
+          "median_ms": 68.2,
+          "p95_ms": 74.4,
+          "min_ms": 66.5
+        },
+        "cascade_total": {
+          "median_ms": 24831.6,
+          "p95_ms": 25887.2,
+          "min_ms": 23792.7
+        },
+        "api_data": {
+          "median_ms": 1.3,
+          "p95_ms": 1.3,
+          "min_ms": 1.3
+        },
+        "startup_overhead": {
+          "median_ms": 11861.2,
+          "p95_ms": 11866.6,
+          "min_ms": 10355.7
+        },
+        "import_total": {
+          "median_ms": 25081.7,
+          "p95_ms": 26134.3,
+          "min_ms": 24057.2
+        }
+      }
+    },
+    "100": {
+      "input_rows": 100,
+      "runs": 3,
+      "summary": {
+        "probe_load": {
+          "median_ms": 75.0,
+          "p95_ms": 81.0,
+          "min_ms": 73.0
+        },
+        "segment": {
+          "median_ms": 6164.0,
+          "p95_ms": 6374.0,
+          "min_ms": 6064.0
+        },
+        "classify": {
+          "median_ms": 2952.0,
+          "p95_ms": 3127.0,
+          "min_ms": 2893.0
+        },
+        "embed_facets": {
+          "median_ms": 8062.0,
+          "p95_ms": 8550.0,
+          "min_ms": 7896.0
+        },
+        "sentiment": {
+          "median_ms": 2347.0,
+          "p95_ms": 2463.0,
+          "min_ms": 2288.0
+        },
+        "rules_facets_write": {
+          "median_ms": 16.0,
+          "p95_ms": 56.0,
+          "min_ms": 15.0
+        },
+        "total": {
+          "median_ms": 19948.0,
+          "p95_ms": 20201.0,
+          "min_ms": 19347.0
+        },
+        "normalize": {
+          "median_ms": 111.4,
+          "p95_ms": 118.0,
+          "min_ms": 109.5
+        },
+        "aggregate": {
+          "median_ms": 99.1,
+          "p95_ms": 103.7,
+          "min_ms": 94.1
+        },
+        "build_data": {
+          "median_ms": 74.2,
+          "p95_ms": 76.2,
+          "min_ms": 73.7
+        },
+        "cascade_total": {
+          "median_ms": 31920.3,
+          "p95_ms": 31978.8,
+          "min_ms": 31132.9
+        },
+        "api_data": {
+          "median_ms": 3.7,
+          "p95_ms": 4.1,
+          "min_ms": 3.6
+        },
+        "startup_overhead": {
+          "median_ms": 11785.9,
+          "p95_ms": 12030.8,
+          "min_ms": 11719.3
+        },
+        "import_total": {
+          "median_ms": 32207.2,
+          "p95_ms": 32272.2,
+          "min_ms": 31412.7
+        }
+      }
+    },
+    "377": {
+      "input_rows": 377,
+      "runs": 3,
+      "summary": {
+        "probe_load": {
+          "median_ms": 74.0,
+          "p95_ms": 93.0,
+          "min_ms": 74.0
+        },
+        "segment": {
+          "median_ms": 10237.0,
+          "p95_ms": 10455.0,
+          "min_ms": 9603.0
+        },
+        "classify": {
+          "median_ms": 6081.0,
+          "p95_ms": 6359.0,
+          "min_ms": 5745.0
+        },
+        "embed_facets": {
+          "median_ms": 11800.0,
+          "p95_ms": 12297.0,
+          "min_ms": 11742.0
+        },
+        "sentiment": {
+          "median_ms": 6758.0,
+          "p95_ms": 6998.0,
+          "min_ms": 6697.0
+        },
+        "rules_facets_write": {
+          "median_ms": 34.0,
+          "p95_ms": 62.0,
+          "min_ms": 34.0
+        },
+        "total": {
+          "median_ms": 35141.0,
+          "p95_ms": 35778.0,
+          "min_ms": 34224.0
+        },
+        "normalize": {
+          "median_ms": 234.1,
+          "p95_ms": 235.8,
+          "min_ms": 232.9
+        },
+        "aggregate": {
+          "median_ms": 101.1,
+          "p95_ms": 105.9,
+          "min_ms": 99.8
+        },
+        "build_data": {
+          "median_ms": 81.9,
+          "p95_ms": 83.0,
+          "min_ms": 80.0
+        },
+        "cascade_total": {
+          "median_ms": 47639.1,
+          "p95_ms": 48357.5,
+          "min_ms": 45633.6
+        },
+        "api_data": {
+          "median_ms": 12.4,
+          "p95_ms": 13.4,
+          "min_ms": 11.3
+        },
+        "startup_overhead": {
+          "median_ms": 12498.1,
+          "p95_ms": 12579.5,
+          "min_ms": 11409.6
+        },
+        "import_total": {
+          "median_ms": 48060.9,
+          "p95_ms": 48776.0,
+          "min_ms": 46047.5
+        }
+      }
+    }
+  }
+}

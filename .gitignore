@@ -1,0 +1,22 @@
+# Model weights are published separately on Hugging Face. They are never tracked.
+models/
+*.safetensors
+
+# Imported and generated data. Nothing under data/ is tracked; the first import
+# creates the directory with the dataset, stats and backups.
+/data/
+app/web/data.js
+
+# Local design reference, not part of the shipped tool.
+DESIGN.md
+
+# External evaluation gold set: not part of this repository, never commit it.
+# Set REVIEWS_GOLD to a local JSONL file to run scripts/pick_seed.py.
+
+# Python and local tooling.
+__pycache__/
+*.py[cod]
+.pytest_cache/
+.venv/
+.env
+.coverage

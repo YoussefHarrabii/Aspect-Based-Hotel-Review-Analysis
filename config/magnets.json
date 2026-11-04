@@ -1,0 +1,45 @@
+{
+  "version": "example-1",
+  "note": "Example magnet words per bucket. Each word appears under ONE bucket only; no generic adjectives (good/nice/beautiful/comfortable). A sentence is routed to the bucket whose magnets it is closest to (max cosine in e5-instruct space), within its category and polarity. General Experience is a verdict-only trap. Replace this file with your own bucket set.",
+  "instruction": "Represent the specific topic of this hotel review sentence for clustering.",
+  "buckets": {
+    "Room & Property": {
+      "Cleanliness": ["dirt", "dirty", "clean", "cleanliness", "filth", "stain", "grimy", "hygiene", "unclean", "mould", "musty", "smell", "dust", "cockroach", "insects", "spotless", "tidy", "immaculate"],
+      "Comfort": ["bed", "mattress", "pillow", "sleep", "duvet", "blanket", "air conditioning", "air con", "stuffy", "temperature", "thermostat", "heat", "cold", "comfortable bed", "sleep quality"],
+      "Maintenance & Condition": ["renovation", "renovated", "refurbished", "dated", "worn", "shabby", "run-down", "falling apart", "disrepair", "upkeep", "peeling paint", "electricity", "power cut", "wiring", "maintenance", "decor"],
+      "General Experience": ["recommend", "worth", "value for money", "star rating", "disappointed", "impression", "avoid", "waste of money"]
+    },
+    "Food & Drink": {
+      "Food Quality": ["taste", "tasty", "flavour", "bland", "delicious", "inedible", "seasoning", "cooked", "food quality", "cold food", "stale", "greasy food"],
+      "Food Variety & Repetition": ["variety", "repetitive", "monotonous", "selection", "same food", "limited choice", "repeat", "repetition", "options", "range", "plentiful"],
+      "Breakfast": ["breakfast", "omelette", "eggs", "pastries", "croissant", "morning meal"],
+      "Drinks & Bar": ["drinks", "cocktails", "beer", "wine", "spirits", "soft drinks", "juice", "bar", "bar staff"],
+      "General Experience": ["recommend", "worth", "value for money", "star rating", "disappointed", "impression", "avoid", "waste of money"]
+    },
+    "Staff & Service": {
+      "Reception & Check-in/out": ["reception", "front desk", "check in", "check out", "key card", "reservation", "booking", "receptionist", "arrival", "late check out"],
+      "Staff Attitude": ["friendly", "unfriendly", "rude", "kind", "helpful", "unhelpful", "attitude", "welcoming", "polite", "impolite", "courteous", "smile"],
+      "Service Responsiveness": ["responsive", "ignored", "follow up", "resolve", "resolved", "responded", "no response", "complaint", "not addressed", "never came", "still waiting"],
+      "Management & Policies": ["management", "manager", "refund", "billing", "charge", "policy", "compensation", "rules", "receipt", "invoice", "bill"],
+      "General Experience": ["recommend", "worth", "value for money", "star rating", "impression", "come back", "will return"]
+    },
+    "Pool & Beach": {
+      "Pool Condition": ["pool", "pool water", "pool clean", "pool size", "pool temperature", "swimming pool", "pools"],
+      "Beach": ["beach", "sand", "seaweed", "shoreline", "seashore", "beach clean", "sandy beach", "sea water", "beachfront", "beach access"],
+      "Sunbeds & Towels": ["sunbed", "deckchair", "lounger", "parasol", "umbrella", "beach towels", "towels", "sun lounger"],
+      "General Experience": ["recommend", "worth", "value for money", "star rating", "disappointed", "impression", "avoid"]
+    },
+    "Spa & Wellness": {
+      "Treatments & Massage": ["massage", "steam bath", "treatment", "facial", "scrub", "body scrub", "spa treatment", "aromatherapy"],
+      "Spa Facilities": ["jacuzzi", "sauna", "steam room", "whirlpool", "spa facility", "spa pool", "relaxation room"],
+      "Price & Value": ["price", "pricing", "expensive", "cheap", "cost", "pricey", "value for money", "worth", "overpriced", "affordable", "reasonably priced"],
+      "General Experience": ["recommend", "rating", "star rating", "disappointed", "impression", "avoid", "waste of money"]
+    },
+    "Entertainment & Animation": {
+      "Animation Team": ["animation", "animator", "animators", "entertainer", "entertainers", "activity team", "host"],
+      "Shows & Evening Entertainment": ["show", "shows", "performance", "karaoke", "fire show", "comedian", "theatre", "evening entertainment"],
+      "Kids Club": ["kids club", "mini club", "children club", "childcare", "kids entertainment", "mini disco"],
+      "General Experience": ["recommend", "worth", "value for money", "star rating", "disappointed", "great time", "good time", "had fun"]
+    }
+  }
+}

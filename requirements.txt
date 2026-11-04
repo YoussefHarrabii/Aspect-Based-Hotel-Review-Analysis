@@ -1,0 +1,18 @@
+# Runtime dependencies for Aspect-Based Hotel Review Analysis (Python 3.11, Windows + Nvidia).
+# Torch comes from the CUDA index, matching the source environment.
+--extra-index-url https://download.pytorch.org/whl/cu124
+
+torch==2.6.0+cu124
+transformers==4.56.2
+sentence-transformers==5.6.0
+deepmultilingualpunctuation==1.0.1
+scikit-learn==1.9.0
+numpy==2.4.6
+joblib==1.5.3
+safetensors==0.8.0
+
+# Native window for run.bat (serve.py --native); falls back to the browser if missing.
+pywebview==6.2.1
+
+# Test-only; the acceptance check runs pytest after installing this file.
+pytest==9.1.1

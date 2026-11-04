@@ -1,0 +1,45 @@
+{
+  "version": "example-1",
+  "note": "Coarse hotel sub-themes, made mutually exclusive. Route by the aspect being evaluated, not by where it appears. Replace this file with your own bucket set.",
+  "rules": "Choose the bucket for the SUBJECT being evaluated, not where the sentence sits (a dirty bathroom -> Cleanliness; a leaking shower -> Bathroom; broken AC -> Comfort). Air conditioning and room temperature always -> Comfort. Use General Experience ONLY for whole-property verdicts, star ratings, or generic praise/complaint with no specific feature.",
+  "buckets": {
+    "Room & Property": {
+      "Cleanliness": "dirt, stains, smell, hygiene of anything in the room",
+      "Comfort": "bed, mattress, pillows, sleep, room temperature and air conditioning, stuffiness",
+      "Maintenance & Condition": "broken or failing things, wear, dated decor, refurbishment, building condition, power failures",
+      "General Experience": "overall experience and general impression, star rating, value for money, the stay as a whole"
+    },
+    "Food & Drink": {
+      "Food Quality": "taste, freshness, food temperature, cooking",
+      "Food Variety & Repetition": "selection and monotony of the menu",
+      "Breakfast": "breakfast specifically",
+      "Drinks & Bar": "alcoholic drinks, cocktails, soft drinks, bar availability and service",
+      "General Experience": "overall food verdict with no specific feature"
+    },
+    "Staff & Service": {
+      "Reception & Check-in/out": "front desk, check-in/out, key cards, desk bookings",
+      "Staff Attitude": "friendliness, rudeness, helpfulness, kindness of people",
+      "Service Responsiveness": "how requests and complaints are handled, follow-up",
+      "Management & Policies": "management, billing, rules, tips policy, pricing disputes",
+      "General Experience": "overall service verdict with no specific feature"
+    },
+    "Pool & Beach": {
+      "Pool Condition": "pool water, size, cleanliness, temperature",
+      "Beach": "beach sand, cleanliness, size, seaweed",
+      "Sunbeds & Towels": "sunbeds, loungers, parasols, towels",
+      "General Experience": "overall pool or beach verdict with no specific feature"
+    },
+    "Spa & Wellness": {
+      "Treatments & Massage": "massages, steam bath, treatments",
+      "Spa Facilities": "jacuzzi, sauna, steam room, facility condition",
+      "Price & Value": "pricing and value for money",
+      "General Experience": "overall spa verdict with no specific feature"
+    },
+    "Entertainment & Animation": {
+      "Animation Team": "animation and entertainment staff",
+      "Shows & Evening Entertainment": "evening shows and performances",
+      "Kids Club": "kids and mini club specifically",
+      "General Experience": "overall entertainment verdict with no specific feature"
+    }
+  }
+}

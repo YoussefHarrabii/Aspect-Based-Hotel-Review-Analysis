@@ -1,0 +1,83 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Decisions / Aspect-Based Hotel Review Analysis</title>
+<link rel="stylesheet" href="assets/fonts.css">
+<link rel="stylesheet" href="assets/design.css">
+<link rel="stylesheet" href="assets/docs.css">
+</head>
+<body>
+<header class="topbar">
+  <div class="brand">
+    <span class="wordmark">Aspect-Based Hotel Review Analysis</span>
+    <span class="brand-rule" aria-hidden="true"></span>
+    <span class="view-label">Decisions</span>
+  </div>
+  <div class="doc-links">
+    <a href="index.html">Showcase</a>
+    <a href="method.html">Method</a>
+    <a href="facets.html">Facets</a>
+    <a href="latency.html">Latency</a>
+    <a href="decisions.html" aria-current="page">Decisions</a>
+  </div>
+</header>
+
+<main class="doc-main">
+  <header class="doc-hero">
+    <p class="eyebrow doc-kicker">Decisions</p>
+    <h1 class="display2">What this build does.</h1>
+    <p class="lede">Short records of the choices that shape the output.</p>
+  </header>
+
+  <section class="doc-section">
+    <h2 class="heading">Scope</h2>
+    <ul>
+      <li>One property per batch, imported as a local CSV through the page.</li>
+      <li>The service reads the imported dataset and serves the overview.</li>
+    </ul>
+  </section>
+
+  <section class="doc-section">
+    <h2 class="heading">Labels</h2>
+    <ul>
+      <li><b>Location is an Other catch-all.</b> It stays in the checkpoint because removing an output would change the label order; it is excluded from F1, aggregation and UI.</li>
+      <li><b>General Experience is a catch-all facet.</b> The local dashboard shows it in a separate block; the showcase omits it.</li>
+      <li><b>Six actionable categories</b> are shown and scored. <code>Location</code> is the seventh model output.</li>
+      <li><b>In-room food and drink are Food &amp; Drink.</b></li>
+      <li><b>View, quietness and noise are Room &amp; Property.</b></li>
+      <li><b>Off-property people and operators are dropped</b> from Staff &amp; Service.</li>
+    </ul>
+  </section>
+
+  <section class="doc-section">
+    <h2 class="heading">Model</h2>
+    <ul>
+      <li><b>One seed ships.</b> The build uses <code>cat_v5c_s2</code> as a single checkpoint. Category-macro F1 is 0.890 on the held-out gold; the measured three-seed spread is 0.025.</li>
+      <li><b>Sentiment</b> is an e5-instruct embedding plus logistic regression. Scores inside <code>|p - 0.5| &lt; 0.10</code> become neutral.</li>
+      <li><b>Per-label thresholds</b> are tuned on validation and applied to each sigmoid independently.</li>
+      <li><b>Facet routing stays deterministic.</b> The sentence is embedded once and compared with each bucket's magnet words; the highest cosine wins within the category and polarity.</li>
+    </ul>
+  </section>
+
+  <section class="doc-section">
+    <h2 class="heading">Facet benchmark</h2>
+    <p>On the hand-labelled gold, the current magnet router leads the broad sweep at 0.922 top-1 coverage and 0.937 bucket coverage on 593 held-out sentences. Linear SVM reaches 0.823 coverage, logistic regression 0.801, the magnet centroid 0.809 and kNN 0.730. Clustering and topic models are below 0.59. The full table is on <a href="facets.html">Facets</a>.</p>
+    <p>The nearest-magnet geometry is hard to beat; the remaining headroom is mostly vocabulary and bucket definition.</p>
+  </section>
+
+  <section class="doc-section">
+    <h2 class="heading">Data</h2>
+    <ul>
+      <li>Exact duplicates are removed; near-duplicates are removed at a high token-overlap guard. The dataset lives under <code>data/</code>, which git ignores and the first import creates.</li>
+      <li>A duplicate <code>review_id</code>, a non-ISO date or a rating outside 1&ndash;5 rejects the import before the current dataset is cleared.</li>
+    </ul>
+  </section>
+
+  <footer class="doc-foot">
+    <p class="caption">Gold labels and the production magnet bank are not released.</p>
+  </footer>
+</main>
+</body>
+</html>

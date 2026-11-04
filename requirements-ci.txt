@@ -1,0 +1,14 @@
+# CI-only install. The tests run offline with local fakes, so this file takes CPU
+# torch instead of the CUDA wheel in requirements.txt and leaves out pywebview.
+--extra-index-url https://download.pytorch.org/whl/cpu
+
+torch==2.6.0+cpu
+transformers==4.56.2
+sentence-transformers==5.6.0
+deepmultilingualpunctuation==1.0.1
+scikit-learn==1.9.0
+numpy==2.4.6
+joblib==1.5.3
+safetensors==0.8.0
+
+pytest==9.1.1

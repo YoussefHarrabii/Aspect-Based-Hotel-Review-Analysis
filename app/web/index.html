@@ -1,0 +1,99 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Aspect-Based Hotel Review Analysis</title>
+<link rel="stylesheet" href="fonts.css">
+<link rel="stylesheet" href="design.css?v=6">
+</head>
+<body>
+<div class="progress"><div id="progress"></div></div>
+
+<header class="topbar">
+  <div class="brand">
+    <span class="wordmark">Aspect-Based Hotel Review Analysis</span>
+    <span class="brand-rule" aria-hidden="true"></span>
+    <span class="view-label">Overview</span>
+  </div>
+  <div class="header-actions">
+    <button class="btn ghost compact" type="button" id="importBtn">Import CSV</button>
+  </div>
+</header>
+
+<main class="container">
+  <section id="importView" class="view" hidden>
+    <div class="hero">
+      <p class="eyebrow">Import a batch</p>
+      <h1 class="display"><span class="line"><span>Review the batch.</span></span><span class="line"><span>See every mention.</span></span></h1>
+      <p class="lede">One CSV. The classifier labels each sentence, the sentiment probe scores it, and the facets below name what guests are actually talking about.</p>
+    </div>
+    <div class="panel import-panel">
+      <div class="panel-head">
+        <p class="eyebrow">CSV</p>
+        <span class="caption">UTF-8</span>
+      </div>
+      <label class="drop" id="drop" for="fileInput">
+        <span class="drop-title">Drop a CSV here</span>
+        <span class="drop-sub">review_id, date, rating, text</span>
+        <span class="btn accent compact" aria-hidden="true">Choose file</span>
+        <input id="fileInput" type="file" accept=".csv,text/csv">
+      </label>
+      <p class="status-line" id="importStatus" aria-live="polite"></p>
+      <p class="form-note">The import replaces the current single-property dataset. The first run loads the classifier and the e5 encoder; later imports reuse the local cache.</p>
+    </div>
+  </section>
+
+  <section id="dashboardView" hidden>
+    <div class="overview-top">
+      <div class="hero">
+        <p class="eyebrow" id="dashEyebrow">Single property</p>
+        <h1 class="display"><span class="line"><span id="dashLine1">What guests</span></span><span class="line"><span id="dashLine2">talk about.</span></span></h1>
+        <p class="lede" id="dashLede"></p>
+      </div>
+
+      <div class="panel overview-panel" id="summaryPanel">
+        <div class="panel-head">
+          <p class="eyebrow">Overview</p>
+          <span class="caption" id="summaryDate"></span>
+        </div>
+        <p class="display2" id="summaryReviews">0 reviews</p>
+        <p class="caption" id="summaryMentions"></p>
+        <div class="metrics" id="summaryMetrics"></div>
+        <div class="ledger" id="summaryLedger"></div>
+      </div>
+    </div>
+
+    <hr class="rule">
+    <div class="section-head">
+      <div>
+        <p class="eyebrow">Categories</p>
+        <h2 class="heading">Where mentions land</h2>
+      </div>
+    </div>
+    <div class="category-grid reveal" id="categoryGrid"></div>
+
+    <hr class="rule">
+    <div class="section-head">
+      <div>
+        <p class="eyebrow">Facets and mentions</p>
+        <h2 class="heading">The evidence behind each facet</h2>
+      </div>
+      <span class="caption">Top mention per facet</span>
+    </div>
+    <div class="accordion" id="facetAccordion"></div>
+  </section>
+</main>
+
+<footer class="container footer">
+  <span class="caption">Local pipeline.</span>
+  <span class="caption">CSV to SQLite to classifier to mentions to facets.</span>
+</footer>
+
+<div id="modal" hidden></div>
+<div class="toast" id="toast"></div>
+<input id="fileInput2" type="file" accept=".csv,text/csv" hidden>
+
+<script src="app.js"></script>
+</body>
+</html>

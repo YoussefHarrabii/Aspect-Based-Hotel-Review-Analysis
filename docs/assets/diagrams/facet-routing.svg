@@ -1,0 +1,23 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 360 320" role="img" aria-labelledby="facetTitle facetDesc">
+  <title id="facetTitle">Facet routing</title>
+  <desc id="facetDesc">A sentence embedding is compared with each bucket's magnet words. The highest cosine wins; the accent marks the routed bucket.</desc>
+  <g font-family="'IBM Plex Mono', ui-monospace, monospace">
+    <text x="16" y="24" fill="#959089" font-size="8.5" letter-spacing="1">MAGNET SCORE / SENTENCE</text>
+    <g font-size="9" fill="#959089">
+      <text x="16" y="70">Comfort</text><text x="16" y="110">Cleanliness</text><text x="16" y="150">View</text>
+      <text x="16" y="190">Maintenance</text><text x="16" y="230">General exp.</text>
+    </g>
+    <g fill="#363533">
+      <rect x="140" y="62" width="190" height="4" rx="2"/><rect x="140" y="102" width="190" height="4" rx="2"/>
+      <rect x="140" y="142" width="190" height="4" rx="2"/><rect x="140" y="182" width="190" height="4" rx="2"/>
+      <rect x="140" y="222" width="190" height="4" rx="2"/>
+    </g>
+    <g fill="#959089">
+      <rect x="140" y="62" width="150" height="4" rx="2"/><rect x="140" y="102" width="110" height="4" rx="2"/>
+      <rect x="140" y="142" width="70" height="4" rx="2"/><rect x="140" y="182" width="52" height="4" rx="2"/>
+      <rect x="140" y="222" width="34" height="4" rx="2"/>
+    </g>
+    <rect x="140" y="62" width="150" height="4" rx="2" fill="#C42B3E"/>
+    <text x="16" y="300" fill="#959089" font-size="8.5">MAX COSINE PER BUCKET / ACCENT = ROUTED</text>
+  </g>
+</svg>
