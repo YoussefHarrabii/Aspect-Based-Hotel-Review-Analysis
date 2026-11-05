@@ -1,0 +1,214 @@
+{
+  "generated": "2026-11-05",
+  "gold": {
+    "examples": 1033,
+    "categories": 6
+  },
+  "protocol": "held-out gold; one example per review snippet; a neutral mention counts as category-present; Location excluded; per-seed rows use that checkpoint's thresholds; the ensemble row averages the three seeds, thresholds with config/cascade/thresholds.json and applies the rule stack",
+  "methods": [
+    {
+      "micro": {
+        "p": 0.903,
+        "r": 0.908,
+        "f1": 0.9055
+      },
+      "macro": {
+        "p": 0.8902,
+        "r": 0.9088,
+        "f1": 0.899
+      },
+      "per_category": [
+        {
+          "category": "Room & Property",
+          "p": 0.9091,
+          "r": 0.8946,
+          "f1": 0.9018
+        },
+        {
+          "category": "Food & Drink",
+          "p": 0.9223,
+          "r": 0.9317,
+          "f1": 0.927
+        },
+        {
+          "category": "Staff & Service",
+          "p": 0.8862,
+          "r": 0.8986,
+          "f1": 0.8924
+        },
+        {
+          "category": "Pool & Beach",
+          "p": 0.9182,
+          "r": 0.9528,
+          "f1": 0.9352
+        },
+        {
+          "category": "Spa & Wellness",
+          "p": 0.85,
+          "r": 0.9444,
+          "f1": 0.8947
+        },
+        {
+          "category": "Entertainment & Animation",
+          "p": 0.8551,
+          "r": 0.831,
+          "f1": 0.8429
+        }
+      ],
+      "name": "cat_v5c"
+    },
+    {
+      "micro": {
+        "p": 0.876,
+        "r": 0.897,
+        "f1": 0.8864
+      },
+      "macro": {
+        "p": 0.9147,
+        "r": 0.8586,
+        "f1": 0.8815
+      },
+      "per_category": [
+        {
+          "category": "Room & Property",
+          "p": 0.7946,
+          "r": 0.9393,
+          "f1": 0.8609
+        },
+        {
+          "category": "Food & Drink",
+          "p": 0.9142,
+          "r": 0.9454,
+          "f1": 0.9295
+        },
+        {
+          "category": "Staff & Service",
+          "p": 0.8963,
+          "r": 0.8462,
+          "f1": 0.8705
+        },
+        {
+          "category": "Pool & Beach",
+          "p": 0.9694,
+          "r": 0.8962,
+          "f1": 0.9314
+        },
+        {
+          "category": "Spa & Wellness",
+          "p": 1.0,
+          "r": 0.7778,
+          "f1": 0.875
+        },
+        {
+          "category": "Entertainment & Animation",
+          "p": 0.9138,
+          "r": 0.7465,
+          "f1": 0.8217
+        }
+      ],
+      "name": "cat_v5c_s1"
+    },
+    {
+      "micro": {
+        "p": 0.9056,
+        "r": 0.8997,
+        "f1": 0.9026
+      },
+      "macro": {
+        "p": 0.9213,
+        "r": 0.8914,
+        "f1": 0.9051
+      },
+      "per_category": [
+        {
+          "category": "Room & Property",
+          "p": 0.8471,
+          "r": 0.9201,
+          "f1": 0.8821
+        },
+        {
+          "category": "Food & Drink",
+          "p": 0.931,
+          "r": 0.9215,
+          "f1": 0.9262
+        },
+        {
+          "category": "Staff & Service",
+          "p": 0.9084,
+          "r": 0.8671,
+          "f1": 0.8873
+        },
+        {
+          "category": "Pool & Beach",
+          "p": 1.0,
+          "r": 0.9057,
+          "f1": 0.9505
+        },
+        {
+          "category": "Spa & Wellness",
+          "p": 0.8889,
+          "r": 0.8889,
+          "f1": 0.8889
+        },
+        {
+          "category": "Entertainment & Animation",
+          "p": 0.9524,
+          "r": 0.8451,
+          "f1": 0.8955
+        }
+      ],
+      "name": "cat_v5c_s2"
+    },
+    {
+      "micro": {
+        "p": 0.9463,
+        "r": 0.9071,
+        "f1": 0.9263
+      },
+      "macro": {
+        "p": 0.9608,
+        "r": 0.8886,
+        "f1": 0.922
+      },
+      "per_category": [
+        {
+          "category": "Room & Property",
+          "p": 0.9148,
+          "r": 0.9265,
+          "f1": 0.9206
+        },
+        {
+          "category": "Food & Drink",
+          "p": 0.958,
+          "r": 0.9352,
+          "f1": 0.9465
+        },
+        {
+          "category": "Staff & Service",
+          "p": 0.9538,
+          "r": 0.8671,
+          "f1": 0.9084
+        },
+        {
+          "category": "Pool & Beach",
+          "p": 0.9712,
+          "r": 0.9528,
+          "f1": 0.9619
+        },
+        {
+          "category": "Spa & Wellness",
+          "p": 1.0,
+          "r": 0.8333,
+          "f1": 0.9091
+        },
+        {
+          "category": "Entertainment & Animation",
+          "p": 0.9667,
+          "r": 0.8169,
+          "f1": 0.8855
+        }
+      ],
+      "name": "ensemble + rules"
+    }
+  ]
+}

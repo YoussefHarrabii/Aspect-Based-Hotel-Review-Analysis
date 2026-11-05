@@ -22,7 +22,7 @@ excluded from aggregation and the dashboard.
 
 ## Provenance
 
-The classifier is a DeBERTa-v3-base fine-tuned on hand-labelled public reviews from hotels in the same region, and scored on a held-out property that was absent from training. The training corpus and the evaluation gold set are not released. The reported score is therefore not independently reproducible from this repository.
+The classifier is a DeBERTa-v3-base fine-tuned specifically on hand-labelled public reviews from Tunisian hotels, and scored on a held-out Tunisian property that was absent from training. The training corpus and the evaluation gold set are not released. The reported score is therefore not independently reproducible from this repository.
 
 ## Measured score
 
@@ -30,14 +30,15 @@ Protocol: one example per (review id, snippet), a neutral mention counts as
 category-present, six actionable categories, `Location` excluded, per-label
 thresholds from the checkpoint's own `thresholds.json`.
 
-| seed | micro P | micro R | micro F1 | category-macro P | category-macro R | category-macro F1 |
+| checkpoint | micro P | micro R | micro F1 | category-macro P | category-macro R | category-macro F1 |
 | --- | --- | --- | --- | --- | --- | --- |
-| `cat_v5c` | 0.864 | 0.908 | 0.885 | 0.857 | 0.909 | 0.882 |
-| `cat_v5c_s1` | 0.838 | 0.897 | 0.867 | 0.883 | 0.860 | 0.865 |
-| `cat_v5c_s2` | 0.867 | 0.900 | 0.883 | 0.889 | 0.894 | 0.890 |
+| `cat_v5c` | 0.903 | 0.908 | 0.906 | 0.890 | 0.909 | 0.899 |
+| `cat_v5c_s1` | 0.876 | 0.897 | 0.886 | 0.915 | 0.859 | 0.882 |
+| `cat_v5c_s2` | 0.906 | 0.900 | 0.903 | 0.921 | 0.891 | 0.905 |
+| 3-seed + rules (production) | 0.946 | 0.907 | 0.926 | 0.961 | 0.889 | 0.922 |
 
-Winner: `cat_v5c_s2`, category-macro F1 **0.890**. Spread across the three seeds:
-**0.025**.
+Winner: `cat_v5c_s2`, category-macro F1 **0.905**. Spread across the three seeds:
+**0.024**. The ensemble row is the production configuration, not the release.
 
 ## Per-label thresholds
 
@@ -72,7 +73,7 @@ ignored.
 `catmodel.py` accepts a local directory or a Hugging Face id:
 
 ```bat
-set REVIEWS_MODEL=hf:your-account/deberta-review-categories
+set REVIEWS_MODEL=hf:YoussefHarrabi/cat_v5c_s2
 python app\pipeline\cascade_extract.py
 ```
 

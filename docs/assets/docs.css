@@ -37,6 +37,11 @@
 .doc-kicker { margin: 0 0 8px; }
 .doc-foot { margin-top: 64px; padding-top: 24px; border-top: 1px solid var(--hairline); }
 .doc-error { color: var(--negative); font-family: var(--mono); font-size: 12px; }
+@media (max-width: 1180px) {
+  .topbar { grid-template-columns: 1fr; gap: 12px; }
+  .doc-links { justify-content: flex-start; }
+}
+
 @media (max-width: 900px) {
   .doc-main { padding: 36px 20px 64px; }
   .doc-links { justify-content: flex-start; }

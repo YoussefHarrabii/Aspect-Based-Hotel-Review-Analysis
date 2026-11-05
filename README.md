@@ -34,9 +34,9 @@ run.bat
 local `.venv` when it exists.
 
 Classifier weights live outside git. Put the published files in `models\cat`, or set
-`REVIEWS_MODEL=hf:your-account/deberta-review-categories` before starting. The
-first import downloads `intfloat/multilingual-e5-large-instruct` into the Hugging
-Face cache.
+`REVIEWS_MODEL=hf:YoussefHarrabi/cat_v5c_s2` before starting. The model is also
+published at <https://huggingface.co/YoussefHarrabi/cat_v5c_s2>. The first import
+downloads `intfloat/multilingual-e5-large-instruct` into the Hugging Face cache.
 
 On a fresh dataset the page starts on the import panel. Drop a CSV or choose a file. For a sample:
 
@@ -104,6 +104,7 @@ GitHub Pages settings: deploy from the `main` branch, folder `/docs`.
 The showcase has a short method band below the ten reviews. The detailed pages are:
 
 - [`docs/method.html`](docs/method.html): stages, fit versus serve, mention anatomy.
+- [`docs/categorization.html`](docs/categorization.html): the three measured seeds and the production ensemble.
 - [`docs/facets.html`](docs/facets.html): the facet-routing benchmark.
 - [`docs/latency.html`](docs/latency.html): per-stage timings.
 - [`docs/decisions.html`](docs/decisions.html): decisions and limits.
@@ -112,7 +113,7 @@ Diagrams are hand-authored SVGs in `docs/assets/diagrams/`, using the same hairl
 
 ## Model provenance
 
-The classifier is a DeBERTa-v3-base fine-tuned on hand-labelled public reviews from hotels in the same region, and scored on a held-out property that was absent from training. The training corpus and the evaluation gold set are not released. The reported score is therefore not independently reproducible from this repository.
+The classifier is a DeBERTa-v3-base fine-tuned specifically on hand-labelled public reviews from Tunisian hotels, and scored on a held-out Tunisian property that was absent from training. The training corpus and the evaluation gold set are not released. The reported score is therefore not independently reproducible from this repository.
 
 ## Model, thresholds and score
 
@@ -121,8 +122,8 @@ Per-label thresholds are applied to each sigmoid independently; `Location` is
 present in the checkpoint but excluded from the score and from the dashboard. The
 thresholds are listed in [`docs/model-card.md`](docs/model-card.md).
 
-On the held-out property the shipped seed scores **category-macro F1 0.890**
-(micro F1 0.883). The spread across the three measured seeds is **0.025**
+On the held-out Tunisian property the shipped seed scores **category-macro F1 0.905**
+(micro F1 0.903). The spread across the three measured seeds is **0.024**
 category-macro F1.
 
 Classifier weights are not in git. The float32 checkpoint is 737,734,660 bytes

@@ -1,0 +1,87 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Categorization / Aspect-Based Hotel Review Analysis</title>
+<link rel="stylesheet" href="assets/fonts.css">
+<link rel="stylesheet" href="assets/design.css">
+<link rel="stylesheet" href="assets/docs.css">
+</head>
+<body>
+<header class="topbar">
+  <div class="brand">
+    <span class="wordmark">Aspect-Based Hotel Review Analysis</span>
+    <span class="brand-rule" aria-hidden="true"></span>
+    <span class="view-label">Categorization</span>
+  </div>
+  <div class="doc-links">
+    <a href="index.html">Showcase</a>
+    <a href="method.html">Method</a>
+    <a href="categorization.html" aria-current="page">Categorization</a>
+    <a href="facets.html">Facets</a>
+    <a href="latency.html">Latency</a>
+    <a href="decisions.html">Decisions</a>
+  </div>
+</header>
+
+<main class="doc-main">
+  <header class="doc-hero">
+    <p class="eyebrow doc-kicker">Categorization</p>
+    <h1 class="display2">Three seeds were measured. One ships.</h1>
+    <p class="lede">Production runs a three-seed ensemble with the rule stack. The release ships one checkpoint: it is the best single seed, and three fp16 files would triple the download.</p>
+  </header>
+
+  <section class="doc-section">
+    <h2 class="heading">Protocol</h2>
+    <ul>
+      <li><b>Gold:</b> one held-out Tunisian property, 1,033 snippet examples, six actionable categories, <code>Location</code> excluded from the score.</li>
+      <li><b>Scoring:</b> a neutral mention counts as category-present; each single-seed row uses that checkpoint's own per-label thresholds and no rules.</li>
+      <li><b>Ensemble:</b> the production row averages the three sigmoid outputs, thresholds with the ensemble file and applies the rule stack, so it is not a like-for-like single model.</li>
+    </ul>
+  </section>
+
+  <section class="doc-section">
+    <h2 class="heading">Category classification</h2>
+    <p class="caption" id="seedMeta">Loading the cached run.</p>
+    <div class="doc-table-wrap">
+      <table class="doc-table">
+        <thead id="seedHead"><tr><th>Category</th><th>Loading...</th></tr></thead>
+        <tbody id="seedRows"><tr><td colspan="5" class="caption">Loading...</td></tr></tbody>
+      </table>
+    </div>
+    <p><code>cat_v5c_s2</code> has the best single-seed macro average at 0.905, against 0.899 for <code>cat_v5c</code> and 0.882 for <code>cat_v5c_s1</code>. The ensemble adds 1.7 points, but it needs all three fp16 checkpoints: about 1.03 GiB against 352 MiB for one. The release keeps the single best seed.</p>
+  </section>
+
+  <footer class="doc-foot">
+    <p class="caption">Gold labels and the training corpus are not released.</p>
+  </footer>
+</main>
+
+<script>
+const fmt = (x) => Number(x).toFixed(3);
+const label = (name) =>
+  name === "cat_v5c_s2" ? "cat_v5c_s2 (shipped)" :
+  name === "ensemble + rules" ? "Ensemble + rules" : name;
+
+fetch("data/categorization.json").then((r) => {
+  if (!r.ok) throw new Error("categorization.json " + r.status);
+  return r.json();
+}).then((d) => {
+  const methods = d.methods;
+  const cats = methods[0].per_category.map((c) => c.category);
+  document.getElementById("seedHead").innerHTML =
+    `<tr><th>Category</th>${methods.map((m) => `<th>${label(m.name)}</th>`).join("")}</tr>`;
+  const rows = cats.map((cat, i) =>
+    `<tr><td>${cat}</td>${methods.map((m) => `<td class="num">${fmt(m.per_category[i].f1)}</td>`).join("")}</tr>`);
+  rows.push(`<tr class="current"><td>Micro F1</td>${methods.map((m) => `<td class="num">${fmt(m.micro.f1)}</td>`).join("")}</tr>`);
+  rows.push(`<tr><td>Macro F1</td>${methods.map((m) => `<td class="num">${fmt(m.macro.f1)}</td>`).join("")}</tr>`);
+  document.getElementById("seedRows").innerHTML = rows.join("");
+  document.getElementById("seedMeta").textContent =
+    `${d.gold.examples} held-out examples / ${d.gold.categories} categories / measured ${d.generated}`;
+}).catch((e) => {
+  document.getElementById("seedMeta").innerHTML = `<span class="doc-error">${e.message}</span>`;
+});
+</script>
+</body>
+</html>

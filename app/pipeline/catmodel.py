@@ -11,7 +11,7 @@ import os
 import torch
 from transformers import AutoModelForSequenceClassification, AutoTokenizer
 
-DEFAULT_MODEL = os.getenv("REVIEWS_MODEL") or "hf:<your-account>/deberta-review-categories"
+DEFAULT_MODEL = os.getenv("REVIEWS_MODEL") or "hf:YoussefHarrabi/cat_v5c_s2"
 
 
 def resolve(source=None):
