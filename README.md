@@ -7,6 +7,10 @@ replaces the current batch. A separate static showcase in `docs/` shows ten
 cached reviews and lets a reader open each review's categories, sentiment and
 facets.
 
+**Live demo:** <https://youssefharrabii.github.io/Aspect-Based-Hotel-Review-Analysis/>
+
+[![The showcase: ten cached reviews with categories, sentiment and facets](docs/assets/showcase.png)](https://youssefharrabii.github.io/Aspect-Based-Hotel-Review-Analysis/)
+
 ## Architecture
 
 ![Pipeline](docs/assets/diagrams/pipeline.svg)
@@ -21,6 +25,8 @@ import runs the same local pipeline that the CLI runs.
 
 ## Quickstart
 
+Windows:
+
 ```bat
 git clone https://github.com/YoussefHarrabii/Aspect-Based-Hotel-Review-Analysis.git
 cd Aspect-Based-Hotel-Review-Analysis
@@ -30,8 +36,24 @@ pip install -r requirements.txt
 run.bat
 ```
 
-`run.bat` opens a pywebview window and falls back to the browser. It uses the
-local `.venv` when it exists.
+macOS / Linux:
+
+```bash
+git clone https://github.com/YoussefHarrabii/Aspect-Based-Hotel-Review-Analysis.git
+cd Aspect-Based-Hotel-Review-Analysis
+python3 -m venv .venv
+source .venv/bin/activate
+pip install -r requirements.txt
+python app/serve.py
+```
+
+`run.bat` is the Windows launcher; it opens a pywebview window and falls back to
+the browser, using the local `.venv` when it exists. On macOS and Linux,
+`python app/serve.py` starts the same server and opens the default browser.
+
+`requirements.txt` pins the CUDA build for Windows and Nvidia. On macOS, or on a
+CPU-only Linux machine, install the torch build for that platform first and the
+remaining packages on top.
 
 Classifier weights live outside git. Put the published files in `models\cat`, or set
 `REVIEWS_MODEL=hf:YoussefHarrabi/cat_v5c_s2` before starting. The model is also
